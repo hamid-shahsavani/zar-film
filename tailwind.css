@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .select-selected {
+    background-color: rgba(0, 0, 0, .8);
+    border-radius: 10px;
+    padding: 14px !important;
+    font-size: 14px !important;
+  }
+  .select-selected:after {
+    position: absolute;
+    font-family: 'FontAwesome';
+    content: "\f077";
+    font-size: 14px;
+    padding: 4px 9px;
+    background: #141415;
+    top:20%;
+    left: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: transform .5s;
+  }
+
+  .select-selected.select-arrow-active:after {
+    transform: rotate(180deg);
+  }
+
+  .select-items div,.select-selected {
+    color: #ffffff;
+    padding: 3px 8px;
+  }
+  .select-items {
+    position: absolute;
+    background-color: #040406;
+    top: 110%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgb(46, 46, 46);
+  }
+  .select-items div {
+    font-size: 13px !important;
+    padding: 5px 10px;
+  }
+  .select-hide {
+    display: none;
+  }
+  .select-items div:hover, .same-as-selected {
+    background-color: #b86400;
+  }
+  .same-as-selected {
+    
+    border: 1px solid #c8730a !important;
+  }
+}
