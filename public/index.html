@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="fa" dir="rtl" class="scroll-smooth"">
   <head>
     <p class="w-1/2 w-1/3 w-1/4"></p>
     <meta charset="UTF-8" />
@@ -17,15 +17,27 @@
       <!-- top-message -->
       <div x-data="{hideTop: false}" class="w-full z-50 bg-amber-600 text-slate-200" :class="hideTop ? 'hidden' : ''" id="top-message">
         <div class="container px-3 md:p-0 flex h-10 items-center">
-          <div class="w-[90%] md:w-[70%] lg:w-[60%] flex items-center md:justify-end">
+          <div class="w-[97%] flex items-center justify-center">
             <span class="font-light">دریافت ادرس های جدید در تلگرام!</span>
-            <a href="javascript:void(0)" class="mr-2 px-3 py-0.5 rounded-lg bg-amber-700 bg-opacity-60 font-light">عضویت</a>
+            <a href="javascript:void(0)" class="mr-4 px-3 py-0.5 rounded-lg bg-amber-700 bg-opacity-60 font-light">عضویت</a>
           </div>
-          <div class="w-[10%] md:w-[30%] lg:w-[60%%] flex justify-end">
+          <div class="w-[3%] flex justify-end">
             <button @click="hideTop = true" class="flex justify-start border border-slate-200 p-1 rounded-lg">
               <svg class="w-4 h-4 stroke-slate-200" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
           </div>
+        </div>
+      </div>
+      <!-- header top [only desktop]-->
+      <div class="h-12 bg-black hidden md:flex items-center">
+        <div class="container h-full flex items-center gap-4">
+          <a href="javascript:void(0);" class="font-light text-sm text-[#a9aaae] transition-all duration-500 hover:text-white">صفحه اصلی</a>
+          <a href="javascript:void(0);" class="font-light text-sm text-[#a9aaae] transition-all duration-500 hover:text-white">درباره ما</a>
+          <a href="javascript:void(0);" class="font-light text-sm text-[#a9aaae] transition-all duration-500 hover:text-white">تماس با ما</a>
+          <a href="javascript:void(0);" class="bg-[#279a2d] text-white px-2 font-light text-[13px] py-1 flex justify-center items-center rounded-xl gap-1">
+            <span class="pt-[1px]">دانلود اپلیکیشن</span>
+            <svg class="w-5 h-5 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M144 268.4V358c0 6.9 4.5 14 11.4 14H184v52c0 13.3 10.7 24 24 24s24-10.7 24-24v-52h49v52c0 7.5 3.4 14.2 8.8 18.6 3.9 3.4 9.1 5.4 14.7 5.4h.5c13.3 0 24-10.7 24-24v-52h27.6c7 0 11.4-7.1 11.4-13.9V192H144v76.4zM408 176c-13.3 0-24 10.7-24 24v96c0 13.3 10.7 24 24 24s24-10.7 24-24v-96c0-13.3-10.7-24-24-24zM104 176c-13.3 0-24 10.7-24 24v96c0 13.3 10.7 24 24 24s24-10.7 24-24v-96c0-13.3-10.7-24-24-24z"/><g><path d="M311.2 89.1l18.5-21.9c.4-.5-.2-1.6-1.3-2.5-1.1-.8-2.4-1-2.7-.4l-19.2 22.8c-13.6-5.4-30.2-8.8-50.6-8.8-20.5-.1-37.2 3.2-50.8 8.5l-19-22.4c-.4-.5-1.6-.4-2.7.4s-1.7 1.8-1.3 2.5l18.3 21.6c-48.2 20.9-55.4 72.2-56.4 87.2h223.6c-.9-15.1-8-65.7-56.4-87zm-104.4 49.8c-7.4 0-13.5-6-13.5-13.3 0-7.3 6-13.3 13.5-13.3 7.4 0 13.5 6 13.5 13.3 0 7.3-6 13.3-13.5 13.3zm98.4 0c-7.4 0-13.5-6-13.5-13.3 0-7.3 6-13.3 13.5-13.3 7.4 0 13.5 6 13.5 13.3 0 7.3-6.1 13.3-13.5 13.3z"/></g></svg>
+          </a>
         </div>
       </div>
       <!-- header-top --->
@@ -48,7 +60,7 @@
             <!-- logo -->
             <div class="flex-1 flex justify-end md:justify-center">
               <a href="javascript:void(0)">
-                <img class="mr-6 md:m-0" width="150" src="../public/assets/img/logo-dark.png" alt="">
+                <img class="mr-6 md:m-0" width="130" src="../public/assets/img/logo-dark.png" alt="">
               </a>
             </div>
             <!-- notification -->
@@ -323,10 +335,10 @@
       </section>
       <!-- android app download btn -->
       <div class="px-4 w-full flex justify-center">
-        <div class="bg-[#279a2d] text-white font-light w-56 h-12 flex justify-center items-center rounded-xl gap-2">
+        <a href="javascript:void(0);" class="bg-[#279a2d] text-white font-light w-56 h-12 flex justify-center items-center rounded-xl gap-2">
           <span>دانلود اپلیکیشن</span>
           <svg class="w-7 h-7 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M144 268.4V358c0 6.9 4.5 14 11.4 14H184v52c0 13.3 10.7 24 24 24s24-10.7 24-24v-52h49v52c0 7.5 3.4 14.2 8.8 18.6 3.9 3.4 9.1 5.4 14.7 5.4h.5c13.3 0 24-10.7 24-24v-52h27.6c7 0 11.4-7.1 11.4-13.9V192H144v76.4zM408 176c-13.3 0-24 10.7-24 24v96c0 13.3 10.7 24 24 24s24-10.7 24-24v-96c0-13.3-10.7-24-24-24zM104 176c-13.3 0-24 10.7-24 24v96c0 13.3 10.7 24 24 24s24-10.7 24-24v-96c0-13.3-10.7-24-24-24z"/><g><path d="M311.2 89.1l18.5-21.9c.4-.5-.2-1.6-1.3-2.5-1.1-.8-2.4-1-2.7-.4l-19.2 22.8c-13.6-5.4-30.2-8.8-50.6-8.8-20.5-.1-37.2 3.2-50.8 8.5l-19-22.4c-.4-.5-1.6-.4-2.7.4s-1.7 1.8-1.3 2.5l18.3 21.6c-48.2 20.9-55.4 72.2-56.4 87.2h223.6c-.9-15.1-8-65.7-56.4-87zm-104.4 49.8c-7.4 0-13.5-6-13.5-13.3 0-7.3 6-13.3 13.5-13.3 7.4 0 13.5 6 13.5 13.3 0 7.3-6 13.3-13.5 13.3zm98.4 0c-7.4 0-13.5-6-13.5-13.3 0-7.3 6-13.3 13.5-13.3 7.4 0 13.5 6 13.5 13.3 0 7.3-6.1 13.3-13.5 13.3z"/></g></svg>
-        </div>
+        </a>
       </div>
       <!-- advanced search -->
       <div class="mb-2.5" x-data="{showMobileAdvancedSearchMenu: false}">
@@ -494,7 +506,7 @@
           </div>
           <!-- cards -->
           <div class="flex md:flex-wrap gap-4 md:gap-0 pr-4 md:p-0 overflow-x-scroll md:overflow-hidden">
-            <a href="javascript:void(0)" id="update-card" class="relative mb-10 md:mb-12 flex justify-center">
+            <a href="javascript:void(0)" id="update-card" class="relative mb-10 md:mb-12 flex justify-center md:w-1/2 lg:w-1/3 xl:w-1/4">
               <div href="#" class="relative w-[280px] md:w-[95%] rounded-2xl overflow-hidden">
                 <!-- img -->
                 <img class="md:w-full md:h-[190px] transition-all duration-500 hover:brightness-50 md:object-cover" src="assets/img/update-1.jpg" alt="">
@@ -516,7 +528,7 @@
                 <span>the flash 2014</span>
               </div>
             </a>
-            <a href="javascript:void(0)" id="update-card" class="relative mb-10 md:mb-12 flex justify-center">
+            <a href="javascript:void(0)" id="update-card" class="relative mb-10 md:mb-12 flex justify-center md:w-1/2 lg:w-1/3 xl:w-1/4">
               <div href="#" class="relative w-[280px] md:w-[95%] rounded-2xl overflow-hidden">
                 <!-- img -->
                 <img class="md:w-full md:h-[190px]  transition-all duration-500 hover:brightness-50 md:object-cover" src="assets/img/update-1.jpg" alt="">
@@ -538,7 +550,7 @@
                 <span>the flash 2014</span>
               </div>
             </a>
-            <a href="javascript:void(0)" id="update-card" class="relative mb-10 md:mb-12 flex justify-center">
+            <a href="javascript:void(0)" id="update-card" class="relative mb-10 md:mb-12 flex justify-center md:w-1/2 lg:w-1/3 xl:w-1/4">
               <div href="#" class="relative w-[280px] md:w-[95%] rounded-2xl overflow-hidden">
                 <!-- img -->
                 <img class="md:w-full md:h-[190px]  transition-all duration-500 hover:brightness-50 md:object-cover" src="assets/img/update-1.jpg" alt="">
@@ -560,7 +572,7 @@
                 <span>the flash 2014</span>
               </div>
             </a>
-            <a href="javascript:void(0)" id="update-card" class="relative mb-10 md:mb-12 flex justify-center">
+            <a href="javascript:void(0)" id="update-card" class="relative mb-10 md:mb-12 flex justify-center md:w-1/2 lg:w-1/3 xl:w-1/4">
               <div href="#" class="relative w-[280px] md:w-[95%] rounded-2xl overflow-hidden">
                 <!-- img -->
                 <img class="md:w-full md:h-[190px]  transition-all duration-500 hover:brightness-50 md:object-cover" src="assets/img/update-1.jpg" alt="">
@@ -582,7 +594,7 @@
                 <span>the flash 2014</span>
               </div>
             </a>
-            <a href="javascript:void(0)" id="update-card" class="relative mb-10 md:mb-12 flex justify-center">
+            <a href="javascript:void(0)" id="update-card" class="relative mb-10 md:mb-12 flex justify-center md:w-1/2 lg:w-1/3 xl:w-1/4">
               <div href="#" class="relative w-[280px] md:w-[95%] rounded-2xl overflow-hidden">
                 <!-- img -->
                 <img class="md:w-full md:h-[190px]  transition-all duration-500 hover:brightness-50 md:object-cover" src="assets/img/update-1.jpg" alt="">
@@ -604,7 +616,7 @@
                 <span>the flash 2014</span>
               </div>
             </a>
-            <a href="javascript:void(0)" id="update-card" class="relative mb-10 md:mb-12 flex justify-center">
+            <a href="javascript:void(0)" id="update-card" class="relative mb-10 md:mb-12 flex justify-center md:w-1/2 lg:w-1/3 xl:w-1/4">
               <div href="#" class="relative w-[280px] md:w-[95%] rounded-2xl overflow-hidden">
                 <!-- img -->
                 <img class="md:w-full md:h-[190px] md:object-cover  transition-all duration-500 hover:brightness-50" src="assets/img/update-1.jpg" alt="">
@@ -626,7 +638,7 @@
                 <span>the flash 2014</span>
               </div>
             </a>
-            <a href="javascript:void(0)" id="update-card" class="relative mb-10 md:mb-12 flex justify-center">
+            <a href="javascript:void(0)" id="update-card" class="relative mb-10 md:mb-12 flex justify-center md:w-1/2 lg:w-1/3 xl:w-1/4">
               <div href="#" class="relative w-[280px] md:w-[95%] rounded-2xl overflow-hidden">
                 <!-- img -->
                 <img class="md:w-full md:h-[190px] md:object-cover  transition-all duration-500 hover:brightness-50" src="assets/img/update-1.jpg" alt="">
@@ -648,7 +660,7 @@
                 <span>the flash 2014</span>
               </div>
             </a>
-            <a href="javascript:void(0)" id="update-card" class="relative mb-10 md:mb-12 flex justify-center">
+            <a href="javascript:void(0)" id="update-card" class="relative mb-10 md:mb-12 flex justify-center md:w-1/2 lg:w-1/3 xl:w-1/4">
               <div href="#" class="relative w-[280px] md:w-[95%] rounded-2xl overflow-hidden">
                 <!-- img -->
                 <img class="md:w-full md:h-[190px]  transition-all duration-500 hover:brightness-50 md:object-cover" src="assets/img/update-1.jpg" alt="">
@@ -676,9 +688,9 @@
       <!-- last animation based on category -->
       <section class="py-1 md:pb-4 space-y-2 container">
         <!-- header -->
-        <div href="javascript:void(0);" class="flex items-center justify-between gap-2 px-4 text-[#b8b8b8]">
+        <div href="javascript:void(0);" class="flex items-center justify-between md:my-4 gap-2 px-4 text-[#efefef]">
           <div class="font-bold">
-            <span>انیمیشن ها</span>
+            <span>فیلم های زیرنویس فارسی چسبیده</span>
           </div>
           <a href="javascript:void(0);" class="flex gap-1.5 items-center">
             <div class="text-xs">مشاهده بیشتر</div>
@@ -688,57 +700,343 @@
           </a>
         </div>
         <!-- cards -->
-        <div x-data="{}" class="flex px-4 gap-4 overflow-x-scroll">
-          <template x-for="i in 8">
-            <a href="javascript:void(0)" class="relative pt-3 flex min-w-[170px]">
-              <!-- image , rate user , rate imdb , mark , top-text -->
-              <div class="w-full relative">
-                <!-- img -->
-                <img class="w-[170px] rounded-xl overflow-hidden" src="assets/img/card-1.jpg" alt="">
-                <!-- top -->
-                <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
-                  <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">زیرنویس</div> 
-                </div>
-                <!-- save -->
-                <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
-                  <svg x-show="!active" class="fill-white h-[16px] w-[16px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M320 0H64C28.72 0 0 28.7 0 64v431.1c0 5.844 3.188 11.23 8.312 14.04c5.125 2.781 11.34 2.562 16.28-.5313L192 402.1l167.4 106.5C362 511.2 365 512 368 512c2.656 0 5.281-.6562 7.688-1.969C380.8 507.2 384 501.8 384 495.1V64C384 28.7 355.3 0 320 0zM352 466.9l-151.4-96.36C197.1 368.8 195 368 192 368s-5.969 .8281-8.594 2.5L32 466.9V64c0-17.64 14.34-32 32-32h256c17.66 0 32 14.36 32 32V466.9z"/></svg>
-                  <svg x-show="active" class="fill-[#eb7e03] h-[15px] w-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M384 48V512l-192-112L0 512V48C0 21.5 21.5 0 48 0h288C362.5 0 384 21.5 384 48z"/></svg>
-                </div>
-                <!-- rate -->
-                <div class="relative w-full flex justify-between text-white px-1 bottom-10">
-                  <!-- rate user -->
-                  <div class="h-9 flex justify-center items-center gap-2 p-2 bg-black backdrop-blur-xl bg-opacity-80 rounded-xl">
-                    <div class="text-[#ffad49] font-light h-6 flex items-center pt-2">86%</div>
-                    <div>
-                      <svg class="w-5 h-5" fill="none" stroke="#ffad49" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
-                    </div>
+        <div class="flex px-4 gap-4 overflow-x-scroll md:overflow-hidden">
+          <a id="movie-card" href="javascript:void(0)" class="relative pt-3 flex min-w-[170px] md:w-1/4 lg:w-1/5 xl:w-1/6 2xl:w-[14.2857142857%]">
+            <!-- image , rate user , rate imdb , mark , top-text -->
+            <div class="w-full relative">
+              <!-- img -->
+              <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/card-1.jpg" alt="">
+              <!-- top -->
+              <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">زیرنویس</div> 
+              </div>
+              <!-- save -->
+              <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
+                <svg x-show="!active" class="fill-white h-[16px] w-[16px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M320 0H64C28.72 0 0 28.7 0 64v431.1c0 5.844 3.188 11.23 8.312 14.04c5.125 2.781 11.34 2.562 16.28-.5313L192 402.1l167.4 106.5C362 511.2 365 512 368 512c2.656 0 5.281-.6562 7.688-1.969C380.8 507.2 384 501.8 384 495.1V64C384 28.7 355.3 0 320 0zM352 466.9l-151.4-96.36C197.1 368.8 195 368 192 368s-5.969 .8281-8.594 2.5L32 466.9V64c0-17.64 14.34-32 32-32h256c17.66 0 32 14.36 32 32V466.9z"/></svg>
+                <svg x-show="active" class="fill-[#eb7e03] h-[15px] w-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M384 48V512l-192-112L0 512V48C0 21.5 21.5 0 48 0h288C362.5 0 384 21.5 384 48z"/></svg>
+              </div>
+              <!-- rate -->
+              <div class="relative w-full flex justify-between text-white px-1 bottom-10">
+                <!-- rate user -->
+                <div class="h-9 flex justify-center items-center gap-2 p-2 bg-black backdrop-blur-xl bg-opacity-80 rounded-xl">
+                  <div class="text-[#ffad49] font-light h-6 flex items-center pt-2">86%</div>
+                  <div>
+                    <svg class="w-5 h-5" fill="none" stroke="#ffad49" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
                   </div>
-                  <!-- rate imdb -->
-                  <div class="flex justify-center items-center gap-1 pt-2">
-                    <div class="font-normal">7.5</div>
-                    <div>
-                      <svg class="mb-2.5 w-5 h-5 fill-[#D97706]"w xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"/></svg>
-                    </div>
+                </div>
+                <!-- rate imdb -->
+                <div class="flex justify-center items-center gap-1 pt-2">
+                  <div class="font-normal">7.5</div>
+                  <div>
+                    <svg class="mb-2.5 w-5 h-5 fill-[#D97706]"w xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"/></svg>
                   </div>
                 </div>
               </div>
-              <!-- category [default hide]-->
-              <div class="absolute w-full h-[87%] flex justify-center items-center opacity-0 transition-all duration-500 hover:opacity-100 rounded-xl bg-black bg-opacity-60 backdrop-blur-[2px]">
-                <div class="mt-10 py-10 h-full flex flex-col justify-between items-center">
-                  <span class="text-white font-light">WEBDL 1080p</span>
-                  <div class="flex flex-wrap justify-center gap-3">
-                    <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">اکشن</div>
-                    <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">درام</div>
-                    <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">تخیلی</div>
-  
+            </div>
+            <!-- category [default hide]-->
+            <div class="absolute w-full h-[87%] flex justify-center items-center opacity-0 transition-all duration-500 hover:opacity-100 rounded-xl bg-black bg-opacity-60 backdrop-blur-[2px]">
+              <div class="mt-10 py-10 h-full flex flex-col justify-between items-center">
+                <span class="text-white font-light">WEBDL 1080p</span>
+                <div class="flex flex-wrap justify-center gap-3 lg:gap-x-5 2xl:gap-x-7">
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">اکشن</div>
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">درام</div>
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">تخیلی</div>
+
+                </div>
+                <span class="text-white font-extralight">(2022)</span>
+              </div>
+            </div>
+            <!-- bottom-text -->
+            <span class="absolute w-full text-center bottom-2 text-white transition-all duration-300 hover:text-[#eb8308]">Sonic 2</span>
+          </a>
+          <a id="movie-card" href="javascript:void(0)" class="relative pt-3 flex min-w-[170px] md:w-1/4 lg:w-1/5 xl:w-1/6 2xl:w-[14.2857142857%]">
+            <!-- image , rate user , rate imdb , mark , top-text -->
+            <div class="w-full relative">
+              <!-- img -->
+              <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/card-1.jpg" alt="">
+              <!-- top -->
+              <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">زیرنویس</div> 
+              </div>
+              <!-- save -->
+              <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
+                <svg x-show="!active" class="fill-white h-[16px] w-[16px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M320 0H64C28.72 0 0 28.7 0 64v431.1c0 5.844 3.188 11.23 8.312 14.04c5.125 2.781 11.34 2.562 16.28-.5313L192 402.1l167.4 106.5C362 511.2 365 512 368 512c2.656 0 5.281-.6562 7.688-1.969C380.8 507.2 384 501.8 384 495.1V64C384 28.7 355.3 0 320 0zM352 466.9l-151.4-96.36C197.1 368.8 195 368 192 368s-5.969 .8281-8.594 2.5L32 466.9V64c0-17.64 14.34-32 32-32h256c17.66 0 32 14.36 32 32V466.9z"/></svg>
+                <svg x-show="active" class="fill-[#eb7e03] h-[15px] w-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M384 48V512l-192-112L0 512V48C0 21.5 21.5 0 48 0h288C362.5 0 384 21.5 384 48z"/></svg>
+              </div>
+              <!-- rate -->
+              <div class="relative w-full flex justify-between text-white px-1 bottom-10">
+                <!-- rate user -->
+                <div class="h-9 flex justify-center items-center gap-2 p-2 bg-black backdrop-blur-xl bg-opacity-80 rounded-xl">
+                  <div class="text-[#ffad49] font-light h-6 flex items-center pt-2">86%</div>
+                  <div>
+                    <svg class="w-5 h-5" fill="none" stroke="#ffad49" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
                   </div>
-                  <span class="text-white font-extralight">(2022)</span>
+                </div>
+                <!-- rate imdb -->
+                <div class="flex justify-center items-center gap-1 pt-2">
+                  <div class="font-normal">7.5</div>
+                  <div>
+                    <svg class="mb-2.5 w-5 h-5 fill-[#D97706]"w xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"/></svg>
+                  </div>
                 </div>
               </div>
-              <!-- bottom-text -->
-              <span class="absolute w-full text-center bottom-2 text-white transition-all duration-300 hover:text-[#eb8308]">Sonic 2</span>
-            </a>
-          </template>
+            </div>
+            <!-- category [default hide]-->
+            <div class="absolute w-full h-[87%] flex justify-center items-center opacity-0 transition-all duration-500 hover:opacity-100 rounded-xl bg-black bg-opacity-60 backdrop-blur-[2px]">
+              <div class="mt-10 py-10 h-full flex flex-col justify-between items-center">
+                <span class="text-white font-light">WEBDL 1080p</span>
+                <div class="flex flex-wrap justify-center gap-3 lg:gap-x-5 2xl:gap-x-7">
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">اکشن</div>
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">درام</div>
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">تخیلی</div>
+
+                </div>
+                <span class="text-white font-extralight">(2022)</span>
+              </div>
+            </div>
+            <!-- bottom-text -->
+            <span class="absolute w-full text-center bottom-2 text-white transition-all duration-300 hover:text-[#eb8308]">Sonic 2</span>
+          </a>
+          <a id="movie-card" href="javascript:void(0)" class="relative pt-3 flex min-w-[170px] md:w-1/4 lg:w-1/5 xl:w-1/6 2xl:w-[14.2857142857%]">
+            <!-- image , rate user , rate imdb , mark , top-text -->
+            <div class="w-full relative">
+              <!-- img -->
+              <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/card-1.jpg" alt="">
+              <!-- top -->
+              <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">زیرنویس</div> 
+              </div>
+              <!-- save -->
+              <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
+                <svg x-show="!active" class="fill-white h-[16px] w-[16px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M320 0H64C28.72 0 0 28.7 0 64v431.1c0 5.844 3.188 11.23 8.312 14.04c5.125 2.781 11.34 2.562 16.28-.5313L192 402.1l167.4 106.5C362 511.2 365 512 368 512c2.656 0 5.281-.6562 7.688-1.969C380.8 507.2 384 501.8 384 495.1V64C384 28.7 355.3 0 320 0zM352 466.9l-151.4-96.36C197.1 368.8 195 368 192 368s-5.969 .8281-8.594 2.5L32 466.9V64c0-17.64 14.34-32 32-32h256c17.66 0 32 14.36 32 32V466.9z"/></svg>
+                <svg x-show="active" class="fill-[#eb7e03] h-[15px] w-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M384 48V512l-192-112L0 512V48C0 21.5 21.5 0 48 0h288C362.5 0 384 21.5 384 48z"/></svg>
+              </div>
+              <!-- rate -->
+              <div class="relative w-full flex justify-between text-white px-1 bottom-10">
+                <!-- rate user -->
+                <div class="h-9 flex justify-center items-center gap-2 p-2 bg-black backdrop-blur-xl bg-opacity-80 rounded-xl">
+                  <div class="text-[#ffad49] font-light h-6 flex items-center pt-2">86%</div>
+                  <div>
+                    <svg class="w-5 h-5" fill="none" stroke="#ffad49" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
+                  </div>
+                </div>
+                <!-- rate imdb -->
+                <div class="flex justify-center items-center gap-1 pt-2">
+                  <div class="font-normal">7.5</div>
+                  <div>
+                    <svg class="mb-2.5 w-5 h-5 fill-[#D97706]"w xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"/></svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- category [default hide]-->
+            <div class="absolute w-full h-[87%] flex justify-center items-center opacity-0 transition-all duration-500 hover:opacity-100 rounded-xl bg-black bg-opacity-60 backdrop-blur-[2px]">
+              <div class="mt-10 py-10 h-full flex flex-col justify-between items-center">
+                <span class="text-white font-light">WEBDL 1080p</span>
+                <div class="flex flex-wrap justify-center gap-3 lg:gap-x-5 2xl:gap-x-7">
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">اکشن</div>
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">درام</div>
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">تخیلی</div>
+
+                </div>
+                <span class="text-white font-extralight">(2022)</span>
+              </div>
+            </div>
+            <!-- bottom-text -->
+            <span class="absolute w-full text-center bottom-2 text-white transition-all duration-300 hover:text-[#eb8308]">Sonic 2</span>
+          </a>
+          <a id="movie-card" href="javascript:void(0)" class="relative pt-3 flex min-w-[170px] md:w-1/4 lg:w-1/5 xl:w-1/6 2xl:w-[14.2857142857%]">
+            <!-- image , rate user , rate imdb , mark , top-text -->
+            <div class="w-full relative">
+              <!-- img -->
+              <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/card-1.jpg" alt="">
+              <!-- top -->
+              <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">زیرنویس</div> 
+              </div>
+              <!-- save -->
+              <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
+                <svg x-show="!active" class="fill-white h-[16px] w-[16px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M320 0H64C28.72 0 0 28.7 0 64v431.1c0 5.844 3.188 11.23 8.312 14.04c5.125 2.781 11.34 2.562 16.28-.5313L192 402.1l167.4 106.5C362 511.2 365 512 368 512c2.656 0 5.281-.6562 7.688-1.969C380.8 507.2 384 501.8 384 495.1V64C384 28.7 355.3 0 320 0zM352 466.9l-151.4-96.36C197.1 368.8 195 368 192 368s-5.969 .8281-8.594 2.5L32 466.9V64c0-17.64 14.34-32 32-32h256c17.66 0 32 14.36 32 32V466.9z"/></svg>
+                <svg x-show="active" class="fill-[#eb7e03] h-[15px] w-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M384 48V512l-192-112L0 512V48C0 21.5 21.5 0 48 0h288C362.5 0 384 21.5 384 48z"/></svg>
+              </div>
+              <!-- rate -->
+              <div class="relative w-full flex justify-between text-white px-1 bottom-10">
+                <!-- rate user -->
+                <div class="h-9 flex justify-center items-center gap-2 p-2 bg-black backdrop-blur-xl bg-opacity-80 rounded-xl">
+                  <div class="text-[#ffad49] font-light h-6 flex items-center pt-2">86%</div>
+                  <div>
+                    <svg class="w-5 h-5" fill="none" stroke="#ffad49" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
+                  </div>
+                </div>
+                <!-- rate imdb -->
+                <div class="flex justify-center items-center gap-1 pt-2">
+                  <div class="font-normal">7.5</div>
+                  <div>
+                    <svg class="mb-2.5 w-5 h-5 fill-[#D97706]"w xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"/></svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- category [default hide]-->
+            <div class="absolute w-full h-[87%] flex justify-center items-center opacity-0 transition-all duration-500 hover:opacity-100 rounded-xl bg-black bg-opacity-60 backdrop-blur-[2px]">
+              <div class="mt-10 py-10 h-full flex flex-col justify-between items-center">
+                <span class="text-white font-light">WEBDL 1080p</span>
+                <div class="flex flex-wrap justify-center gap-3 lg:gap-x-5 2xl:gap-x-7">
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">اکشن</div>
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">درام</div>
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">تخیلی</div>
+
+                </div>
+                <span class="text-white font-extralight">(2022)</span>
+              </div>
+            </div>
+            <!-- bottom-text -->
+            <span class="absolute w-full text-center bottom-2 text-white transition-all duration-300 hover:text-[#eb8308]">Sonic 2</span>
+          </a>
+          <a id="movie-card" href="javascript:void(0)" class="relative pt-3 flex min-w-[170px] md:w-1/4 lg:w-1/5 xl:w-1/6 2xl:w-[14.2857142857%]">
+            <!-- image , rate user , rate imdb , mark , top-text -->
+            <div class="w-full relative">
+              <!-- img -->
+              <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/card-1.jpg" alt="">
+              <!-- top -->
+              <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">زیرنویس</div> 
+              </div>
+              <!-- save -->
+              <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
+                <svg x-show="!active" class="fill-white h-[16px] w-[16px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M320 0H64C28.72 0 0 28.7 0 64v431.1c0 5.844 3.188 11.23 8.312 14.04c5.125 2.781 11.34 2.562 16.28-.5313L192 402.1l167.4 106.5C362 511.2 365 512 368 512c2.656 0 5.281-.6562 7.688-1.969C380.8 507.2 384 501.8 384 495.1V64C384 28.7 355.3 0 320 0zM352 466.9l-151.4-96.36C197.1 368.8 195 368 192 368s-5.969 .8281-8.594 2.5L32 466.9V64c0-17.64 14.34-32 32-32h256c17.66 0 32 14.36 32 32V466.9z"/></svg>
+                <svg x-show="active" class="fill-[#eb7e03] h-[15px] w-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M384 48V512l-192-112L0 512V48C0 21.5 21.5 0 48 0h288C362.5 0 384 21.5 384 48z"/></svg>
+              </div>
+              <!-- rate -->
+              <div class="relative w-full flex justify-between text-white px-1 bottom-10">
+                <!-- rate user -->
+                <div class="h-9 flex justify-center items-center gap-2 p-2 bg-black backdrop-blur-xl bg-opacity-80 rounded-xl">
+                  <div class="text-[#ffad49] font-light h-6 flex items-center pt-2">86%</div>
+                  <div>
+                    <svg class="w-5 h-5" fill="none" stroke="#ffad49" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
+                  </div>
+                </div>
+                <!-- rate imdb -->
+                <div class="flex justify-center items-center gap-1 pt-2">
+                  <div class="font-normal">7.5</div>
+                  <div>
+                    <svg class="mb-2.5 w-5 h-5 fill-[#D97706]"w xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"/></svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- category [default hide]-->
+            <div class="absolute w-full h-[87%] flex justify-center items-center opacity-0 transition-all duration-500 hover:opacity-100 rounded-xl bg-black bg-opacity-60 backdrop-blur-[2px]">
+              <div class="mt-10 py-10 h-full flex flex-col justify-between items-center">
+                <span class="text-white font-light">WEBDL 1080p</span>
+                <div class="flex flex-wrap justify-center gap-3 lg:gap-x-5 2xl:gap-x-7">
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">اکشن</div>
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">درام</div>
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">تخیلی</div>
+
+                </div>
+                <span class="text-white font-extralight">(2022)</span>
+              </div>
+            </div>
+            <!-- bottom-text -->
+            <span class="absolute w-full text-center bottom-2 text-white transition-all duration-300 hover:text-[#eb8308]">Sonic 2</span>
+          </a>
+          <a id="movie-card" href="javascript:void(0)" class="relative pt-3 flex min-w-[170px] md:w-1/4 lg:w-1/5 xl:w-1/6 2xl:w-[14.2857142857%]">
+            <!-- image , rate user , rate imdb , mark , top-text -->
+            <div class="w-full relative">
+              <!-- img -->
+              <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/card-1.jpg" alt="">
+              <!-- top -->
+              <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">زیرنویس</div> 
+              </div>
+              <!-- save -->
+              <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
+                <svg x-show="!active" class="fill-white h-[16px] w-[16px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M320 0H64C28.72 0 0 28.7 0 64v431.1c0 5.844 3.188 11.23 8.312 14.04c5.125 2.781 11.34 2.562 16.28-.5313L192 402.1l167.4 106.5C362 511.2 365 512 368 512c2.656 0 5.281-.6562 7.688-1.969C380.8 507.2 384 501.8 384 495.1V64C384 28.7 355.3 0 320 0zM352 466.9l-151.4-96.36C197.1 368.8 195 368 192 368s-5.969 .8281-8.594 2.5L32 466.9V64c0-17.64 14.34-32 32-32h256c17.66 0 32 14.36 32 32V466.9z"/></svg>
+                <svg x-show="active" class="fill-[#eb7e03] h-[15px] w-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M384 48V512l-192-112L0 512V48C0 21.5 21.5 0 48 0h288C362.5 0 384 21.5 384 48z"/></svg>
+              </div>
+              <!-- rate -->
+              <div class="relative w-full flex justify-between text-white px-1 bottom-10">
+                <!-- rate user -->
+                <div class="h-9 flex justify-center items-center gap-2 p-2 bg-black backdrop-blur-xl bg-opacity-80 rounded-xl">
+                  <div class="text-[#ffad49] font-light h-6 flex items-center pt-2">86%</div>
+                  <div>
+                    <svg class="w-5 h-5" fill="none" stroke="#ffad49" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
+                  </div>
+                </div>
+                <!-- rate imdb -->
+                <div class="flex justify-center items-center gap-1 pt-2">
+                  <div class="font-normal">7.5</div>
+                  <div>
+                    <svg class="mb-2.5 w-5 h-5 fill-[#D97706]"w xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"/></svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- category [default hide]-->
+            <div class="absolute w-full h-[87%] flex justify-center items-center opacity-0 transition-all duration-500 hover:opacity-100 rounded-xl bg-black bg-opacity-60 backdrop-blur-[2px]">
+              <div class="mt-10 py-10 h-full flex flex-col justify-between items-center">
+                <span class="text-white font-light">WEBDL 1080p</span>
+                <div class="flex flex-wrap justify-center gap-3 lg:gap-x-5 2xl:gap-x-7">
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">اکشن</div>
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">درام</div>
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">تخیلی</div>
+
+                </div>
+                <span class="text-white font-extralight">(2022)</span>
+              </div>
+            </div>
+            <!-- bottom-text -->
+            <span class="absolute w-full text-center bottom-2 text-white transition-all duration-300 hover:text-[#eb8308]">Sonic 2</span>
+          </a>
+          <a id="movie-card" href="javascript:void(0)" class="relative pt-3 flex min-w-[170px] md:w-1/4 lg:w-1/5 xl:w-1/6 2xl:w-[14.2857142857%]">
+            <!-- image , rate user , rate imdb , mark , top-text -->
+            <div class="w-full relative">
+              <!-- img -->
+              <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/card-1.jpg" alt="">
+              <!-- top -->
+              <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">زیرنویس</div> 
+              </div>
+              <!-- save -->
+              <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
+                <svg x-show="!active" class="fill-white h-[16px] w-[16px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M320 0H64C28.72 0 0 28.7 0 64v431.1c0 5.844 3.188 11.23 8.312 14.04c5.125 2.781 11.34 2.562 16.28-.5313L192 402.1l167.4 106.5C362 511.2 365 512 368 512c2.656 0 5.281-.6562 7.688-1.969C380.8 507.2 384 501.8 384 495.1V64C384 28.7 355.3 0 320 0zM352 466.9l-151.4-96.36C197.1 368.8 195 368 192 368s-5.969 .8281-8.594 2.5L32 466.9V64c0-17.64 14.34-32 32-32h256c17.66 0 32 14.36 32 32V466.9z"/></svg>
+                <svg x-show="active" class="fill-[#eb7e03] h-[15px] w-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M384 48V512l-192-112L0 512V48C0 21.5 21.5 0 48 0h288C362.5 0 384 21.5 384 48z"/></svg>
+              </div>
+              <!-- rate -->
+              <div class="relative w-full flex justify-between text-white px-1 bottom-10">
+                <!-- rate user -->
+                <div class="h-9 flex justify-center items-center gap-2 p-2 bg-black backdrop-blur-xl bg-opacity-80 rounded-xl">
+                  <div class="text-[#ffad49] font-light h-6 flex items-center pt-2">86%</div>
+                  <div>
+                    <svg class="w-5 h-5" fill="none" stroke="#ffad49" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
+                  </div>
+                </div>
+                <!-- rate imdb -->
+                <div class="flex justify-center items-center gap-1 pt-2">
+                  <div class="font-normal">7.5</div>
+                  <div>
+                    <svg class="mb-2.5 w-5 h-5 fill-[#D97706]"w xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"/></svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- category [default hide]-->
+            <div class="absolute w-full h-[87%] flex justify-center items-center opacity-0 transition-all duration-500 hover:opacity-100 rounded-xl bg-black bg-opacity-60 backdrop-blur-[2px]">
+              <div class="mt-10 py-10 h-full flex flex-col justify-between items-center">
+                <span class="text-white font-light">WEBDL 1080p</span>
+                <div class="flex flex-wrap justify-center gap-3 lg:gap-x-5 2xl:gap-x-7">
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">اکشن</div>
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">درام</div>
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">تخیلی</div>
+
+                </div>
+                <span class="text-white font-extralight">(2022)</span>
+              </div>
+            </div>
+            <!-- bottom-text -->
+            <span class="absolute w-full text-center bottom-2 text-white transition-all duration-300 hover:text-[#eb8308]">Sonic 2</span>
+          </a>
         </div>
       </section>
       <!-- persian dub movie -->
@@ -796,11 +1094,10 @@
               <div class="absolute w-full h-[87%] flex justify-center items-center opacity-0 transition-all duration-500 hover:opacity-100 rounded-xl bg-black bg-opacity-60 backdrop-blur-[2px]">
                 <div class="mt-10 py-10 h-full flex flex-col justify-between items-center">
                   <span class="text-white font-light">WEBDL 1080p</span>
-                  <div class="flex flex-wrap justify-center gap-3">
+                  <div class="flex flex-wrap justify-center gap-3 lg:gap-x-5 2xl:gap-x-7">
                     <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">اکشن</div>
                     <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">درام</div>
                     <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">تخیلی</div>
-  
                   </div>
                   <span class="text-white font-extralight">(2022)</span>
                 </div>
@@ -812,9 +1109,9 @@
         </div>
       </section>
       <!-- last movies based on category -->
-      <section class="py-4 space-y-2">
+      <section class="py-1 md:pb-4 space-y-2 container">
         <!-- header -->
-        <div href="javascript:void(0);" class="flex items-center justify-between gap-2 px-4 text-[#b8b8b8]">
+        <div href="javascript:void(0);" class="flex items-center justify-between md:my-4 gap-2 px-4 text-[#efefef]">
           <div class="font-bold">
             <span>انیمیشن ها</span>
           </div>
@@ -826,61 +1123,374 @@
           </a>
         </div>
         <!-- cards -->
-        <div x-data="{}" class="flex px-4 gap-4 overflow-x-scroll">
-          <template x-for="i in 8">
-            <a href="javascript:void(0)" class="relative pt-3 flex min-w-[170px]">
-              <!-- image , rate user , rate imdb , mark , top-text -->
-              <div class="w-full relative">
-                <!-- img -->
-                <img class="w-[170px] rounded-xl overflow-hidden" src="assets/img/card-3.jpg" alt="">
-                <!-- top -->
-                <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
-                  <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">زیرنویس</div> 
-                </div>
-                <!-- save -->
-                <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
-                  <svg x-show="!active" class="fill-white h-[16px] w-[16px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M320 0H64C28.72 0 0 28.7 0 64v431.1c0 5.844 3.188 11.23 8.312 14.04c5.125 2.781 11.34 2.562 16.28-.5313L192 402.1l167.4 106.5C362 511.2 365 512 368 512c2.656 0 5.281-.6562 7.688-1.969C380.8 507.2 384 501.8 384 495.1V64C384 28.7 355.3 0 320 0zM352 466.9l-151.4-96.36C197.1 368.8 195 368 192 368s-5.969 .8281-8.594 2.5L32 466.9V64c0-17.64 14.34-32 32-32h256c17.66 0 32 14.36 32 32V466.9z"/></svg>
-                  <svg x-show="active" class="fill-[#eb7e03] h-[15px] w-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M384 48V512l-192-112L0 512V48C0 21.5 21.5 0 48 0h288C362.5 0 384 21.5 384 48z"/></svg>
-                </div>
-                <!-- rate -->
-                <div class="relative w-full flex justify-between text-white px-1 bottom-10">
-                  <!-- rate user -->
-                  <div class="h-9 flex justify-center items-center gap-2 p-2 bg-black backdrop-blur-xl bg-opacity-80 rounded-xl">
-                    <div class="text-[#ffad49] font-light h-6 flex items-center pt-2">86%</div>
-                    <div>
-                      <svg class="w-5 h-5" fill="none" stroke="#ffad49" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
-                    </div>
+        <div class="flex px-4 gap-4 overflow-x-scroll md:overflow-hidden">
+          <a id="movie-card" href="javascript:void(0)" class="relative pt-3 flex min-w-[170px] md:w-1/4 lg:w-1/5 xl:w-1/6 2xl:w-[14.2857142857%]">
+            <!-- image , rate user , rate imdb , mark , top-text -->
+            <div class="w-full relative">
+              <!-- img -->
+              <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/card-1.jpg" alt="">
+              <!-- top -->
+              <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">زیرنویس</div> 
+              </div>
+              <!-- save -->
+              <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
+                <svg x-show="!active" class="fill-white h-[16px] w-[16px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M320 0H64C28.72 0 0 28.7 0 64v431.1c0 5.844 3.188 11.23 8.312 14.04c5.125 2.781 11.34 2.562 16.28-.5313L192 402.1l167.4 106.5C362 511.2 365 512 368 512c2.656 0 5.281-.6562 7.688-1.969C380.8 507.2 384 501.8 384 495.1V64C384 28.7 355.3 0 320 0zM352 466.9l-151.4-96.36C197.1 368.8 195 368 192 368s-5.969 .8281-8.594 2.5L32 466.9V64c0-17.64 14.34-32 32-32h256c17.66 0 32 14.36 32 32V466.9z"/></svg>
+                <svg x-show="active" class="fill-[#eb7e03] h-[15px] w-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M384 48V512l-192-112L0 512V48C0 21.5 21.5 0 48 0h288C362.5 0 384 21.5 384 48z"/></svg>
+              </div>
+              <!-- rate -->
+              <div class="relative w-full flex justify-between text-white px-1 bottom-10">
+                <!-- rate user -->
+                <div class="h-9 flex justify-center items-center gap-2 p-2 bg-black backdrop-blur-xl bg-opacity-80 rounded-xl">
+                  <div class="text-[#ffad49] font-light h-6 flex items-center pt-2">86%</div>
+                  <div>
+                    <svg class="w-5 h-5" fill="none" stroke="#ffad49" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
                   </div>
-                  <!-- rate imdb -->
-                  <div class="flex justify-center items-center gap-1 pt-2">
-                    <div class="font-normal">7.5</div>
-                    <div>
-                      <svg class="mb-2.5 w-5 h-5 fill-[#D97706]"w xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"/></svg>
-                    </div>
+                </div>
+                <!-- rate imdb -->
+                <div class="flex justify-center items-center gap-1 pt-2">
+                  <div class="font-normal">7.5</div>
+                  <div>
+                    <svg class="mb-2.5 w-5 h-5 fill-[#D97706]"w xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"/></svg>
                   </div>
                 </div>
               </div>
-              <!-- category [default hide]-->
-              <div class="absolute w-full h-[87%] flex justify-center items-center opacity-0 transition-all duration-500 hover:opacity-100 rounded-xl bg-black bg-opacity-60 backdrop-blur-[2px]">
-                <div class="mt-10 py-10 h-full flex flex-col justify-between items-center">
-                  <span class="text-white font-light">WEBDL 1080p</span>
-                  <div class="flex flex-wrap justify-center gap-3">
-                    <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">اکشن</div>
-                    <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">درام</div>
-                    <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">تخیلی</div>
-  
+            </div>
+            <!-- category [default hide]-->
+            <div class="absolute w-full h-[87%] flex justify-center items-center opacity-0 transition-all duration-500 hover:opacity-100 rounded-xl bg-black bg-opacity-60 backdrop-blur-[2px]">
+              <div class="mt-10 py-10 h-full flex flex-col justify-between items-center">
+                <span class="text-white font-light">WEBDL 1080p</span>
+                <div class="flex flex-wrap justify-center gap-3 lg:gap-x-5 2xl:gap-x-7">
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">اکشن</div>
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">درام</div>
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">تخیلی</div>
+
+                </div>
+                <span class="text-white font-extralight">(2022)</span>
+              </div>
+            </div>
+            <!-- bottom-text -->
+            <span class="absolute w-full text-center bottom-2 text-white transition-all duration-300 hover:text-[#eb8308]">Sonic 2</span>
+          </a>
+          <a id="movie-card" href="javascript:void(0)" class="relative pt-3 flex min-w-[170px] md:w-1/4 lg:w-1/5 xl:w-1/6 2xl:w-[14.2857142857%]">
+            <!-- image , rate user , rate imdb , mark , top-text -->
+            <div class="w-full relative">
+              <!-- img -->
+              <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/card-1.jpg" alt="">
+              <!-- top -->
+              <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">زیرنویس</div> 
+              </div>
+              <!-- save -->
+              <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
+                <svg x-show="!active" class="fill-white h-[16px] w-[16px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M320 0H64C28.72 0 0 28.7 0 64v431.1c0 5.844 3.188 11.23 8.312 14.04c5.125 2.781 11.34 2.562 16.28-.5313L192 402.1l167.4 106.5C362 511.2 365 512 368 512c2.656 0 5.281-.6562 7.688-1.969C380.8 507.2 384 501.8 384 495.1V64C384 28.7 355.3 0 320 0zM352 466.9l-151.4-96.36C197.1 368.8 195 368 192 368s-5.969 .8281-8.594 2.5L32 466.9V64c0-17.64 14.34-32 32-32h256c17.66 0 32 14.36 32 32V466.9z"/></svg>
+                <svg x-show="active" class="fill-[#eb7e03] h-[15px] w-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M384 48V512l-192-112L0 512V48C0 21.5 21.5 0 48 0h288C362.5 0 384 21.5 384 48z"/></svg>
+              </div>
+              <!-- rate -->
+              <div class="relative w-full flex justify-between text-white px-1 bottom-10">
+                <!-- rate user -->
+                <div class="h-9 flex justify-center items-center gap-2 p-2 bg-black backdrop-blur-xl bg-opacity-80 rounded-xl">
+                  <div class="text-[#ffad49] font-light h-6 flex items-center pt-2">86%</div>
+                  <div>
+                    <svg class="w-5 h-5" fill="none" stroke="#ffad49" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
                   </div>
-                  <span class="text-white font-extralight">(2022)</span>
+                </div>
+                <!-- rate imdb -->
+                <div class="flex justify-center items-center gap-1 pt-2">
+                  <div class="font-normal">7.5</div>
+                  <div>
+                    <svg class="mb-2.5 w-5 h-5 fill-[#D97706]"w xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"/></svg>
+                  </div>
                 </div>
               </div>
-              <!-- bottom-text -->
-              <span class="absolute w-full text-center bottom-2 text-white transition-all duration-300 hover:text-[#eb8308]">Sonic 2</span>
-            </a>
-          </template>
+            </div>
+            <!-- category [default hide]-->
+            <div class="absolute w-full h-[87%] flex justify-center items-center opacity-0 transition-all duration-500 hover:opacity-100 rounded-xl bg-black bg-opacity-60 backdrop-blur-[2px]">
+              <div class="mt-10 py-10 h-full flex flex-col justify-between items-center">
+                <span class="text-white font-light">WEBDL 1080p</span>
+                <div class="flex flex-wrap justify-center gap-3 lg:gap-x-5 2xl:gap-x-7">
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">اکشن</div>
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">درام</div>
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">تخیلی</div>
+
+                </div>
+                <span class="text-white font-extralight">(2022)</span>
+              </div>
+            </div>
+            <!-- bottom-text -->
+            <span class="absolute w-full text-center bottom-2 text-white transition-all duration-300 hover:text-[#eb8308]">Sonic 2</span>
+          </a>
+          <a id="movie-card" href="javascript:void(0)" class="relative pt-3 flex min-w-[170px] md:w-1/4 lg:w-1/5 xl:w-1/6 2xl:w-[14.2857142857%]">
+            <!-- image , rate user , rate imdb , mark , top-text -->
+            <div class="w-full relative">
+              <!-- img -->
+              <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/card-1.jpg" alt="">
+              <!-- top -->
+              <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">زیرنویس</div> 
+              </div>
+              <!-- save -->
+              <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
+                <svg x-show="!active" class="fill-white h-[16px] w-[16px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M320 0H64C28.72 0 0 28.7 0 64v431.1c0 5.844 3.188 11.23 8.312 14.04c5.125 2.781 11.34 2.562 16.28-.5313L192 402.1l167.4 106.5C362 511.2 365 512 368 512c2.656 0 5.281-.6562 7.688-1.969C380.8 507.2 384 501.8 384 495.1V64C384 28.7 355.3 0 320 0zM352 466.9l-151.4-96.36C197.1 368.8 195 368 192 368s-5.969 .8281-8.594 2.5L32 466.9V64c0-17.64 14.34-32 32-32h256c17.66 0 32 14.36 32 32V466.9z"/></svg>
+                <svg x-show="active" class="fill-[#eb7e03] h-[15px] w-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M384 48V512l-192-112L0 512V48C0 21.5 21.5 0 48 0h288C362.5 0 384 21.5 384 48z"/></svg>
+              </div>
+              <!-- rate -->
+              <div class="relative w-full flex justify-between text-white px-1 bottom-10">
+                <!-- rate user -->
+                <div class="h-9 flex justify-center items-center gap-2 p-2 bg-black backdrop-blur-xl bg-opacity-80 rounded-xl">
+                  <div class="text-[#ffad49] font-light h-6 flex items-center pt-2">86%</div>
+                  <div>
+                    <svg class="w-5 h-5" fill="none" stroke="#ffad49" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
+                  </div>
+                </div>
+                <!-- rate imdb -->
+                <div class="flex justify-center items-center gap-1 pt-2">
+                  <div class="font-normal">7.5</div>
+                  <div>
+                    <svg class="mb-2.5 w-5 h-5 fill-[#D97706]"w xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"/></svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- category [default hide]-->
+            <div class="absolute w-full h-[87%] flex justify-center items-center opacity-0 transition-all duration-500 hover:opacity-100 rounded-xl bg-black bg-opacity-60 backdrop-blur-[2px]">
+              <div class="mt-10 py-10 h-full flex flex-col justify-between items-center">
+                <span class="text-white font-light">WEBDL 1080p</span>
+                <div class="flex flex-wrap justify-center gap-3 lg:gap-x-5 2xl:gap-x-7">
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">اکشن</div>
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">درام</div>
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">تخیلی</div>
+
+                </div>
+                <span class="text-white font-extralight">(2022)</span>
+              </div>
+            </div>
+            <!-- bottom-text -->
+            <span class="absolute w-full text-center bottom-2 text-white transition-all duration-300 hover:text-[#eb8308]">Sonic 2</span>
+          </a>
+          <a id="movie-card" href="javascript:void(0)" class="relative pt-3 flex min-w-[170px] md:w-1/4 lg:w-1/5 xl:w-1/6 2xl:w-[14.2857142857%]">
+            <!-- image , rate user , rate imdb , mark , top-text -->
+            <div class="w-full relative">
+              <!-- img -->
+              <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/card-1.jpg" alt="">
+              <!-- top -->
+              <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">زیرنویس</div> 
+              </div>
+              <!-- save -->
+              <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
+                <svg x-show="!active" class="fill-white h-[16px] w-[16px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M320 0H64C28.72 0 0 28.7 0 64v431.1c0 5.844 3.188 11.23 8.312 14.04c5.125 2.781 11.34 2.562 16.28-.5313L192 402.1l167.4 106.5C362 511.2 365 512 368 512c2.656 0 5.281-.6562 7.688-1.969C380.8 507.2 384 501.8 384 495.1V64C384 28.7 355.3 0 320 0zM352 466.9l-151.4-96.36C197.1 368.8 195 368 192 368s-5.969 .8281-8.594 2.5L32 466.9V64c0-17.64 14.34-32 32-32h256c17.66 0 32 14.36 32 32V466.9z"/></svg>
+                <svg x-show="active" class="fill-[#eb7e03] h-[15px] w-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M384 48V512l-192-112L0 512V48C0 21.5 21.5 0 48 0h288C362.5 0 384 21.5 384 48z"/></svg>
+              </div>
+              <!-- rate -->
+              <div class="relative w-full flex justify-between text-white px-1 bottom-10">
+                <!-- rate user -->
+                <div class="h-9 flex justify-center items-center gap-2 p-2 bg-black backdrop-blur-xl bg-opacity-80 rounded-xl">
+                  <div class="text-[#ffad49] font-light h-6 flex items-center pt-2">86%</div>
+                  <div>
+                    <svg class="w-5 h-5" fill="none" stroke="#ffad49" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
+                  </div>
+                </div>
+                <!-- rate imdb -->
+                <div class="flex justify-center items-center gap-1 pt-2">
+                  <div class="font-normal">7.5</div>
+                  <div>
+                    <svg class="mb-2.5 w-5 h-5 fill-[#D97706]"w xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"/></svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- category [default hide]-->
+            <div class="absolute w-full h-[87%] flex justify-center items-center opacity-0 transition-all duration-500 hover:opacity-100 rounded-xl bg-black bg-opacity-60 backdrop-blur-[2px]">
+              <div class="mt-10 py-10 h-full flex flex-col justify-between items-center">
+                <span class="text-white font-light">WEBDL 1080p</span>
+                <div class="flex flex-wrap justify-center gap-3 lg:gap-x-5 2xl:gap-x-7">
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">اکشن</div>
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">درام</div>
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">تخیلی</div>
+
+                </div>
+                <span class="text-white font-extralight">(2022)</span>
+              </div>
+            </div>
+            <!-- bottom-text -->
+            <span class="absolute w-full text-center bottom-2 text-white transition-all duration-300 hover:text-[#eb8308]">Sonic 2</span>
+          </a>
+          <a id="movie-card" href="javascript:void(0)" class="relative pt-3 flex min-w-[170px] md:w-1/4 lg:w-1/5 xl:w-1/6 2xl:w-[14.2857142857%]">
+            <!-- image , rate user , rate imdb , mark , top-text -->
+            <div class="w-full relative">
+              <!-- img -->
+              <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/card-1.jpg" alt="">
+              <!-- top -->
+              <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">زیرنویس</div> 
+              </div>
+              <!-- save -->
+              <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
+                <svg x-show="!active" class="fill-white h-[16px] w-[16px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M320 0H64C28.72 0 0 28.7 0 64v431.1c0 5.844 3.188 11.23 8.312 14.04c5.125 2.781 11.34 2.562 16.28-.5313L192 402.1l167.4 106.5C362 511.2 365 512 368 512c2.656 0 5.281-.6562 7.688-1.969C380.8 507.2 384 501.8 384 495.1V64C384 28.7 355.3 0 320 0zM352 466.9l-151.4-96.36C197.1 368.8 195 368 192 368s-5.969 .8281-8.594 2.5L32 466.9V64c0-17.64 14.34-32 32-32h256c17.66 0 32 14.36 32 32V466.9z"/></svg>
+                <svg x-show="active" class="fill-[#eb7e03] h-[15px] w-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M384 48V512l-192-112L0 512V48C0 21.5 21.5 0 48 0h288C362.5 0 384 21.5 384 48z"/></svg>
+              </div>
+              <!-- rate -->
+              <div class="relative w-full flex justify-between text-white px-1 bottom-10">
+                <!-- rate user -->
+                <div class="h-9 flex justify-center items-center gap-2 p-2 bg-black backdrop-blur-xl bg-opacity-80 rounded-xl">
+                  <div class="text-[#ffad49] font-light h-6 flex items-center pt-2">86%</div>
+                  <div>
+                    <svg class="w-5 h-5" fill="none" stroke="#ffad49" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
+                  </div>
+                </div>
+                <!-- rate imdb -->
+                <div class="flex justify-center items-center gap-1 pt-2">
+                  <div class="font-normal">7.5</div>
+                  <div>
+                    <svg class="mb-2.5 w-5 h-5 fill-[#D97706]"w xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"/></svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- category [default hide]-->
+            <div class="absolute w-full h-[87%] flex justify-center items-center opacity-0 transition-all duration-500 hover:opacity-100 rounded-xl bg-black bg-opacity-60 backdrop-blur-[2px]">
+              <div class="mt-10 py-10 h-full flex flex-col justify-between items-center">
+                <span class="text-white font-light">WEBDL 1080p</span>
+                <div class="flex flex-wrap justify-center gap-3 lg:gap-x-5 2xl:gap-x-7">
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">اکشن</div>
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">درام</div>
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">تخیلی</div>
+
+                </div>
+                <span class="text-white font-extralight">(2022)</span>
+              </div>
+            </div>
+            <!-- bottom-text -->
+            <span class="absolute w-full text-center bottom-2 text-white transition-all duration-300 hover:text-[#eb8308]">Sonic 2</span>
+          </a>
+          <a id="movie-card" href="javascript:void(0)" class="relative pt-3 flex min-w-[170px] md:w-1/4 lg:w-1/5 xl:w-1/6 2xl:w-[14.2857142857%]">
+            <!-- image , rate user , rate imdb , mark , top-text -->
+            <div class="w-full relative">
+              <!-- img -->
+              <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/card-1.jpg" alt="">
+              <!-- top -->
+              <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">زیرنویس</div> 
+              </div>
+              <!-- save -->
+              <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
+                <svg x-show="!active" class="fill-white h-[16px] w-[16px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M320 0H64C28.72 0 0 28.7 0 64v431.1c0 5.844 3.188 11.23 8.312 14.04c5.125 2.781 11.34 2.562 16.28-.5313L192 402.1l167.4 106.5C362 511.2 365 512 368 512c2.656 0 5.281-.6562 7.688-1.969C380.8 507.2 384 501.8 384 495.1V64C384 28.7 355.3 0 320 0zM352 466.9l-151.4-96.36C197.1 368.8 195 368 192 368s-5.969 .8281-8.594 2.5L32 466.9V64c0-17.64 14.34-32 32-32h256c17.66 0 32 14.36 32 32V466.9z"/></svg>
+                <svg x-show="active" class="fill-[#eb7e03] h-[15px] w-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M384 48V512l-192-112L0 512V48C0 21.5 21.5 0 48 0h288C362.5 0 384 21.5 384 48z"/></svg>
+              </div>
+              <!-- rate -->
+              <div class="relative w-full flex justify-between text-white px-1 bottom-10">
+                <!-- rate user -->
+                <div class="h-9 flex justify-center items-center gap-2 p-2 bg-black backdrop-blur-xl bg-opacity-80 rounded-xl">
+                  <div class="text-[#ffad49] font-light h-6 flex items-center pt-2">86%</div>
+                  <div>
+                    <svg class="w-5 h-5" fill="none" stroke="#ffad49" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
+                  </div>
+                </div>
+                <!-- rate imdb -->
+                <div class="flex justify-center items-center gap-1 pt-2">
+                  <div class="font-normal">7.5</div>
+                  <div>
+                    <svg class="mb-2.5 w-5 h-5 fill-[#D97706]"w xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"/></svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- category [default hide]-->
+            <div class="absolute w-full h-[87%] flex justify-center items-center opacity-0 transition-all duration-500 hover:opacity-100 rounded-xl bg-black bg-opacity-60 backdrop-blur-[2px]">
+              <div class="mt-10 py-10 h-full flex flex-col justify-between items-center">
+                <span class="text-white font-light">WEBDL 1080p</span>
+                <div class="flex flex-wrap justify-center gap-3 lg:gap-x-5 2xl:gap-x-7">
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">اکشن</div>
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">درام</div>
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">تخیلی</div>
+
+                </div>
+                <span class="text-white font-extralight">(2022)</span>
+              </div>
+            </div>
+            <!-- bottom-text -->
+            <span class="absolute w-full text-center bottom-2 text-white transition-all duration-300 hover:text-[#eb8308]">Sonic 2</span>
+          </a>
+          <a id="movie-card" href="javascript:void(0)" class="relative pt-3 flex min-w-[170px] md:w-1/4 lg:w-1/5 xl:w-1/6 2xl:w-[14.2857142857%]">
+            <!-- image , rate user , rate imdb , mark , top-text -->
+            <div class="w-full relative">
+              <!-- img -->
+              <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/card-1.jpg" alt="">
+              <!-- top -->
+              <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">زیرنویس</div> 
+              </div>
+              <!-- save -->
+              <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
+                <svg x-show="!active" class="fill-white h-[16px] w-[16px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M320 0H64C28.72 0 0 28.7 0 64v431.1c0 5.844 3.188 11.23 8.312 14.04c5.125 2.781 11.34 2.562 16.28-.5313L192 402.1l167.4 106.5C362 511.2 365 512 368 512c2.656 0 5.281-.6562 7.688-1.969C380.8 507.2 384 501.8 384 495.1V64C384 28.7 355.3 0 320 0zM352 466.9l-151.4-96.36C197.1 368.8 195 368 192 368s-5.969 .8281-8.594 2.5L32 466.9V64c0-17.64 14.34-32 32-32h256c17.66 0 32 14.36 32 32V466.9z"/></svg>
+                <svg x-show="active" class="fill-[#eb7e03] h-[15px] w-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M384 48V512l-192-112L0 512V48C0 21.5 21.5 0 48 0h288C362.5 0 384 21.5 384 48z"/></svg>
+              </div>
+              <!-- rate -->
+              <div class="relative w-full flex justify-between text-white px-1 bottom-10">
+                <!-- rate user -->
+                <div class="h-9 flex justify-center items-center gap-2 p-2 bg-black backdrop-blur-xl bg-opacity-80 rounded-xl">
+                  <div class="text-[#ffad49] font-light h-6 flex items-center pt-2">86%</div>
+                  <div>
+                    <svg class="w-5 h-5" fill="none" stroke="#ffad49" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
+                  </div>
+                </div>
+                <!-- rate imdb -->
+                <div class="flex justify-center items-center gap-1 pt-2">
+                  <div class="font-normal">7.5</div>
+                  <div>
+                    <svg class="mb-2.5 w-5 h-5 fill-[#D97706]"w xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"/></svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- category [default hide]-->
+            <div class="absolute w-full h-[87%] flex justify-center items-center opacity-0 transition-all duration-500 hover:opacity-100 rounded-xl bg-black bg-opacity-60 backdrop-blur-[2px]">
+              <div class="mt-10 py-10 h-full flex flex-col justify-between items-center">
+                <span class="text-white font-light">WEBDL 1080p</span>
+                <div class="flex flex-wrap justify-center gap-3 lg:gap-x-5 2xl:gap-x-7">
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">اکشن</div>
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">درام</div>
+                  <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">تخیلی</div>
+
+                </div>
+                <span class="text-white font-extralight">(2022)</span>
+              </div>
+            </div>
+            <!-- bottom-text -->
+            <span class="absolute w-full text-center bottom-2 text-white transition-all duration-300 hover:text-[#eb8308]">Sonic 2</span>
+          </a>
         </div>
       </section>
       <div class="mt-16"></div>
     </main>
+    <footer class="hidden md:flex items-center fixed bg-[#141821] h-12 z-50 w-full bottom-0 left-0 right-0">
+      <div class="container flex items-center justify-between px-2">
+        <div class="flex items-center gap-4 h-full">
+          <a href="#">
+            <div class="border border-orange-400 p-0.5 rounded-md">
+              <svg class="w-3.5 h-3.5 stroke-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+            </div>
+          </a>
+          <a href="#">
+            <span class="text-white text-[13px] font-light">پخش آنلاین</span>
+          </a>
+          <a href="#">
+            <span class="text-white text-[13px] font-light">سوالات متداول</span>
+          </a>
+          <a href="#">
+            <span class="text-white text-[13px] font-light">تماس با ما</span>
+          </a>
+        </div>
+        <div class="flex items-center">
+          <p class="text-white text-[13px] font-light">طراحی و توسعه توسط حمید شاهسونی - خرداد ۱۰۴۱</p>
+        </div>
+        <a href="javascript:void(0);" class="bg-[#279a2d] text-white px-2 font-light text-[13px] py-1 flex justify-center items-center rounded-xl gap-1">
+          <span class="pt-[1px]">دانلود اپلیکیشن</span>
+          <svg class="w-5 h-5 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M144 268.4V358c0 6.9 4.5 14 11.4 14H184v52c0 13.3 10.7 24 24 24s24-10.7 24-24v-52h49v52c0 7.5 3.4 14.2 8.8 18.6 3.9 3.4 9.1 5.4 14.7 5.4h.5c13.3 0 24-10.7 24-24v-52h27.6c7 0 11.4-7.1 11.4-13.9V192H144v76.4zM408 176c-13.3 0-24 10.7-24 24v96c0 13.3 10.7 24 24 24s24-10.7 24-24v-96c0-13.3-10.7-24-24-24zM104 176c-13.3 0-24 10.7-24 24v96c0 13.3 10.7 24 24 24s24-10.7 24-24v-96c0-13.3-10.7-24-24-24z"/><g><path d="M311.2 89.1l18.5-21.9c.4-.5-.2-1.6-1.3-2.5-1.1-.8-2.4-1-2.7-.4l-19.2 22.8c-13.6-5.4-30.2-8.8-50.6-8.8-20.5-.1-37.2 3.2-50.8 8.5l-19-22.4c-.4-.5-1.6-.4-2.7.4s-1.7 1.8-1.3 2.5l18.3 21.6c-48.2 20.9-55.4 72.2-56.4 87.2h223.6c-.9-15.1-8-65.7-56.4-87zm-104.4 49.8c-7.4 0-13.5-6-13.5-13.3 0-7.3 6-13.3 13.5-13.3 7.4 0 13.5 6 13.5 13.3 0 7.3-6 13.3-13.5 13.3zm98.4 0c-7.4 0-13.5-6-13.5-13.3 0-7.3 6-13.3 13.5-13.3 7.4 0 13.5 6 13.5 13.3 0 7.3-6.1 13.3-13.5 13.3z"/></g></svg>
+        </a>
+      </div>
+    </footer>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
   </body>

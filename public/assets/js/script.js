@@ -117,23 +117,40 @@ document.addEventListener('DOMContentLoaded',function() {
   let updateCard = document.querySelectorAll('#update-card');
   let currentWidth = window.innerWidth;
   if ((currentWidth > 768) && currentWidth < 1023) {
-    updateCard.forEach((e)=>{
-      e.classList.add('w-1/2');
-    });
     updateCard[7].classList.add('hidden');
     updateCard[6].classList.add('hidden');
     updateCard[5].classList.add('hidden');
     updateCard[4].classList.add('hidden');
   } else if((currentWidth > 1024) && (currentWidth < 1279)) {
     updateCard.forEach((e)=>{
-      e.classList.add('w-1/3');
       e.classList.remove('hidden');
     });
     updateCard[7].classList.add('hidden');
     updateCard[6].classList.add('hidden');
   } else if(currentWidth > 1280) {
     updateCard.forEach((e)=>{
-      e.classList.add('w-1/4');
+      e.classList.remove('hidden');
+    });
+  }
+});
+
+//? for movie-card
+
+document.addEventListener('DOMContentLoaded',function() {
+  let movieCard = document.querySelectorAll('#movie-card');
+  let currentWidth = window.innerWidth;
+  if ((currentWidth > 768) && currentWidth < 1023) {
+    movieCard[6].classList.add('hidden');
+    movieCard[5].classList.add('hidden');
+    movieCard[4].classList.add('hidden');
+  } else if((currentWidth > 1024) && (currentWidth < 1279)) {
+    movieCard.forEach((e)=>{
+      e.classList.remove('hidden');
+    });
+    movieCard[6].classList.add('hidden');
+    movieCard[5].classList.add('hidden');
+  } else if((currentWidth > 1280) && (currentWidth < 1535)) {
+    movieCard.forEach((e)=>{
       e.classList.remove('hidden');
     });
   }
