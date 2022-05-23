@@ -5,7 +5,7 @@ window.onresize = function(){location.reload();}
 
 //? intro slider
 
-var swiper = new Swiper(".swiper", {
+new Swiper(".swiper", {
   effect: 'cards',
   grabCursor: true,
   keyboard: true,
@@ -17,6 +17,7 @@ var swiper = new Swiper(".swiper", {
       delay: 2000,
   },
 });
+
 
 //? mobile advanced search select items 
 
