@@ -558,6 +558,21 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bottom-20 {
   bottom: 5rem;
 }
+.-bottom-10 {
+  bottom: -2.5rem;
+}
+.-bottom-9 {
+  bottom: -2.25rem;
+}
+.-bottom-2 {
+  bottom: -0.5rem;
+}
+.-bottom-3 {
+  bottom: -0.75rem;
+}
+.-bottom-7 {
+  bottom: -1.75rem;
+}
 .z-50 {
   z-index: 50;
 }
@@ -1546,6 +1561,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:left-10 {
     left: 2.5rem;
+  }
+
+  .md\:left-8 {
+    left: 2rem;
+  }
+
+  .md\:left-7 {
+    left: 1.75rem;
   }
 
   .md\:m-0 {
