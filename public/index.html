@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl" class="scroll-smooth"">
+<html lang="fa" dir="rtl" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.1.6/swiper-bundle.min.css" media="(min-width: 768px)" />
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v32.102/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/style.css"/>
     <link rel="stylesheet" href="assets/css/custom.css"/>
     <script src="//unpkg.com/alpinejs" defer></script>
@@ -225,19 +224,19 @@
         </div>
       </div>
     </header>
-    <main class="mt-14">
+    <main class="md:max-w-[768px] md:mx-auto lg:max-w-full">
       <!-- intro card-slider [for mobile] -->
-      <section class="swiper">
+      <section class="swiper-mobile md:hidden flex flex-col mt-14">
         <div class="swiper-wrapper flex">
           <!-- cards -->
-          <div class="swiper-slide">
+          <div class="swiper-slide w-full">
             <a href="javascript:void(0)" class="w-full">
               <div class="w-[200px] relative">
                 <!-- img -->
                 <img class="w-full rounded-xl overflow-hidden" src="assets/img/slider-card-1.jpg" alt="">
                 <!-- top -->
                 <div href="#" class="flex justify-center">
-                  <div class="absolute -top-3 bg-[#279A2D] text-white font-extralight px-4 py-0.5 ring-[6px] ring-black rounded-full">دوبله</div> 
+                  <div class="absolute -top-3 bg-[#279A2D] text-white font-extralight px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
                 </div>
                 <!-- save -->
                 <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-gray-100 !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute top-1 left-1 border w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
@@ -263,14 +262,14 @@
               </div>
             </a>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide w-full">
             <a href="javascript:void(0)" class="w-full">
               <div class="w-[200px] relative">
                 <!-- img -->
                 <img class="w-full rounded-xl overflow-hidden" src="assets/img/slider-card-2.jpg" alt="">
                 <!-- top -->
                 <div href="#" class="flex justify-center">
-                  <div class="absolute -top-3 bg-[#279A2D] text-white font-extralight px-4 py-0.5 ring-[6px] ring-black rounded-full">دوبله</div> 
+                  <div class="absolute -top-3 bg-[#279A2D] text-white font-extralight px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
                 </div>
                 <!-- save -->
                 <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-gray-100 !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute top-1 left-1 border w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
@@ -296,14 +295,14 @@
               </div>
             </a>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide w-full">
             <a href="javascript:void(0)" class="w-full">
               <div class="w-[200px] relative">
                 <!-- img -->
                 <img class="w-full rounded-xl overflow-hidden" src="assets/img/slider-card-3.jpg" alt="">
                 <!-- top -->
                 <div href="#" class="flex justify-center">
-                  <div class="absolute -top-3 bg-[#279A2D] text-white font-extralight px-4 py-0.5 ring-[6px] ring-black rounded-full">دوبله</div> 
+                  <div class="absolute -top-3 bg-[#279A2D] text-white font-extralight px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
                 </div>
                 <!-- save -->
                 <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-gray-100 !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute top-1 left-1 border w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
@@ -329,14 +328,14 @@
               </div>
             </a>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide w-full">
             <a href="javascript:void(0)" class="w-full">
               <div class="w-[200px] relative">
                 <!-- img -->
-                <img class="w-full rounded-xl overflow-hidden" src="assets/img/slider-card-1.jpg" alt="">
+                <img class="w-full rounded-xl overflow-hidden" src="assets/img/slider-card-4.jpg" alt="">
                 <!-- top -->
                 <div href="#" class="flex justify-center">
-                  <div class="absolute -top-3 bg-[#279A2D] text-white font-extralight px-4 py-0.5 ring-[6px] ring-black rounded-full">دوبله</div> 
+                  <div class="absolute -top-3 bg-[#279A2D] text-white font-extralight px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
                 </div>
                 <!-- save -->
                 <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-gray-100 !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute top-1 left-1 border w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
@@ -362,47 +361,14 @@
               </div>
             </a>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide w-full">
             <a href="javascript:void(0)" class="w-full">
               <div class="w-[200px] relative">
                 <!-- img -->
-                <img class="w-full rounded-xl overflow-hidden" src="assets/img/slider-card-2.jpg" alt="">
+                <img class="w-full rounded-xl overflow-hidden" src="assets/img/slider-card-5.jpg" alt="">
                 <!-- top -->
                 <div href="#" class="flex justify-center">
-                  <div class="absolute -top-3 bg-[#279A2D] text-white font-extralight px-4 py-0.5 ring-[6px] ring-black rounded-full">دوبله</div> 
-                </div>
-                <!-- save -->
-                <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-gray-100 !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute top-1 left-1 border w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
-                  <svg x-show="!active" class="fill-white h-[16px] w-[16px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M320 0H64C28.72 0 0 28.7 0 64v431.1c0 5.844 3.188 11.23 8.312 14.04c5.125 2.781 11.34 2.562 16.28-.5313L192 402.1l167.4 106.5C362 511.2 365 512 368 512c2.656 0 5.281-.6562 7.688-1.969C380.8 507.2 384 501.8 384 495.1V64C384 28.7 355.3 0 320 0zM352 466.9l-151.4-96.36C197.1 368.8 195 368 192 368s-5.969 .8281-8.594 2.5L32 466.9V64c0-17.64 14.34-32 32-32h256c17.66 0 32 14.36 32 32V466.9z"/></svg>
-                  <svg x-show="active" class="fill-[#eb7e03] h-[15px] w-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M384 48V512l-192-112L0 512V48C0 21.5 21.5 0 48 0h288C362.5 0 384 21.5 384 48z"/></svg>
-                </div>
-                <!-- rate user -->
-                <div class="relative w-full flex justify-between text-white px-2.5 bottom-12">
-                  <div class="h-10 flex justify-center items-center gap-2 p-3 bg-black backdrop-blur-xl bg-opacity-80 rounded-xl">
-                    <div class="text-[#ffad49] font-light h-10 flex items-center pt-2">86%</div>
-                    <div>
-                      <svg class="w-6 h-6" fill="none" stroke="#ffad49" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
-                    </div>
-                  </div>
-                  <!-- rate imdb -->
-                  <div class="flex justify-center items-center gap-1 pt-2">
-                    <div class="font-normal">7.5</div>
-                    <div>
-                      <svg class="mb-2.5 w-5 h-5 fill-[#D97706]"w xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"/></svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="javascript:void(0)" class="w-full">
-              <div class="w-[200px] relative">
-                <!-- img -->
-                <img class="w-full rounded-xl overflow-hidden" src="assets/img/slider-card-3.jpg" alt="">
-                <!-- top -->
-                <div href="#" class="flex justify-center">
-                  <div class="absolute -top-3 bg-[#279A2D] text-white font-extralight px-4 py-0.5 ring-[6px] ring-black rounded-full">دوبله</div> 
+                  <div class="absolute -top-3 bg-[#279A2D] text-white font-extralight px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
                 </div>
                 <!-- save -->
                 <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-gray-100 !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute top-1 left-1 border w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
@@ -430,6 +396,156 @@
           </div>
         </div>
       </section>
+      <!-- intro [for desktop] -->
+      <section class="md:mt-2 lg:mt-0 relative md:h-[400px] lg:h-[450px] xl:h-[500px] overflow-hidden rounded-b-[40px]">
+        <div class="rounded-b-[40px] overflow-hidden">
+          <!-- show image-->
+          <div class="w-screen overflow-hidden hidden md:block -z-50 desktop-intro-bg-color" dir="ltr">
+            <div class="w-4/6 md:hidden lg:block relative">
+              <div class="h-full w-full absolute desktop-intro-bg-img"></div>
+              <img id="intro-bg-img" src="assets/img/slider-background-4.jpg" alt="image">
+            </div>
+          </div>
+          <!-- intro card-slider -->
+          <div class="swiper-desktop hidden md:flex w-full pt-5 mb-4 lg:pr-2 overflow-hidden lg:w-1/2 absolute md:top-[8%] lg:top-[12%] xl:top-[90px]">
+            <div class="swiper-wrapper">
+              <!-- cards -->
+              <div class="swiper-slide w-1/3">
+                <a href="javascript:void(0)" class="w-full flex justify-center">
+                  <div class="w-[200px] relative">
+                    <!-- img -->
+                    <img class="w-full rounded-xl overflow-hidden" src="assets/img/slider-card-1.jpg" alt="">
+                    <!-- top -->
+                    <div href="#" class="flex justify-center">
+                      <div class="absolute -top-3 bg-[#279A2D] text-white font-extralight px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
+                    </div>
+                    <!-- save -->
+                    <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-gray-100 !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute top-1 left-1 border w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
+                      <svg x-show="!active" class="fill-white h-[16px] w-[16px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M320 0H64C28.72 0 0 28.7 0 64v431.1c0 5.844 3.188 11.23 8.312 14.04c5.125 2.781 11.34 2.562 16.28-.5313L192 402.1l167.4 106.5C362 511.2 365 512 368 512c2.656 0 5.281-.6562 7.688-1.969C380.8 507.2 384 501.8 384 495.1V64C384 28.7 355.3 0 320 0zM352 466.9l-151.4-96.36C197.1 368.8 195 368 192 368s-5.969 .8281-8.594 2.5L32 466.9V64c0-17.64 14.34-32 32-32h256c17.66 0 32 14.36 32 32V466.9z"/></svg>
+                      <svg x-show="active" class="fill-[#eb7e03] h-[15px] w-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M384 48V512l-192-112L0 512V48C0 21.5 21.5 0 48 0h288C362.5 0 384 21.5 384 48z"/></svg>
+                    </div>
+                    <!-- rate user -->
+                    <div class="relative w-full flex justify-between text-white px-2.5 bottom-12">
+                      <div class="h-10 flex justify-center items-center gap-2 p-3 bg-black backdrop-blur-xl bg-opacity-80 rounded-xl">
+                        <div class="text-[#ffad49] font-light h-10 flex items-center pt-2">86%</div>
+                        <div>
+                          <svg class="w-6 h-6" fill="none" stroke="#ffad49" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
+                        </div>
+                      </div>
+                      <!-- rate imdb -->
+                      <div class="flex justify-center items-center gap-1 pt-2">
+                        <div class="font-normal">7.5</div>
+                        <div>
+                          <svg class="mb-2.5 w-5 h-5 fill-[#D97706]"w xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"/></svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide w-1/3">
+                <a href="javascript:void(0)" class="w-full flex justify-center">
+                  <div class="w-[200px] relative">
+                    <!-- img -->
+                    <img class="w-full rounded-xl overflow-hidden" src="assets/img/slider-card-2.jpg" alt="">
+                    <!-- top -->
+                    <div href="#" class="flex justify-center">
+                      <div class="absolute -top-3 bg-[#279A2D] text-white font-extralight px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
+                    </div>
+                    <!-- save -->
+                    <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-gray-100 !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute top-1 left-1 border w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
+                      <svg x-show="!active" class="fill-white h-[16px] w-[16px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M320 0H64C28.72 0 0 28.7 0 64v431.1c0 5.844 3.188 11.23 8.312 14.04c5.125 2.781 11.34 2.562 16.28-.5313L192 402.1l167.4 106.5C362 511.2 365 512 368 512c2.656 0 5.281-.6562 7.688-1.969C380.8 507.2 384 501.8 384 495.1V64C384 28.7 355.3 0 320 0zM352 466.9l-151.4-96.36C197.1 368.8 195 368 192 368s-5.969 .8281-8.594 2.5L32 466.9V64c0-17.64 14.34-32 32-32h256c17.66 0 32 14.36 32 32V466.9z"/></svg>
+                      <svg x-show="active" class="fill-[#eb7e03] h-[15px] w-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M384 48V512l-192-112L0 512V48C0 21.5 21.5 0 48 0h288C362.5 0 384 21.5 384 48z"/></svg>
+                    </div>
+                    <!-- rate user -->
+                    <div class="relative w-full flex justify-between text-white px-2.5 bottom-12">
+                      <div class="h-10 flex justify-center items-center gap-2 p-3 bg-black backdrop-blur-xl bg-opacity-80 rounded-xl">
+                        <div class="text-[#ffad49] font-light h-10 flex items-center pt-2">86%</div>
+                        <div>
+                          <svg class="w-6 h-6" fill="none" stroke="#ffad49" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
+                        </div>
+                      </div>
+                      <!-- rate imdb -->
+                      <div class="flex justify-center items-center gap-1 pt-2">
+                        <div class="font-normal">7.5</div>
+                        <div>
+                          <svg class="mb-2.5 w-5 h-5 fill-[#D97706]"w xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"/></svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide w-1/3">
+                <a href="javascript:void(0)" class="w-full  flex justify-center">
+                  <div class="w-[200px] relative">
+                    <!-- img -->
+                    <img class="w-full rounded-xl overflow-hidden" src="assets/img/slider-card-3.jpg" alt="">
+                    <!-- top -->
+                    <div href="#" class="flex justify-center">
+                      <div class="absolute -top-3 bg-[#279A2D] text-white font-extralight px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
+                    </div>
+                    <!-- save -->
+                    <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-gray-100 !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute top-1 left-1 border w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
+                      <svg x-show="!active" class="fill-white h-[16px] w-[16px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M320 0H64C28.72 0 0 28.7 0 64v431.1c0 5.844 3.188 11.23 8.312 14.04c5.125 2.781 11.34 2.562 16.28-.5313L192 402.1l167.4 106.5C362 511.2 365 512 368 512c2.656 0 5.281-.6562 7.688-1.969C380.8 507.2 384 501.8 384 495.1V64C384 28.7 355.3 0 320 0zM352 466.9l-151.4-96.36C197.1 368.8 195 368 192 368s-5.969 .8281-8.594 2.5L32 466.9V64c0-17.64 14.34-32 32-32h256c17.66 0 32 14.36 32 32V466.9z"/></svg>
+                      <svg x-show="active" class="fill-[#eb7e03] h-[15px] w-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M384 48V512l-192-112L0 512V48C0 21.5 21.5 0 48 0h288C362.5 0 384 21.5 384 48z"/></svg>
+                    </div>
+                    <!-- rate user -->
+                    <div class="relative w-full flex justify-between text-white px-2.5 bottom-12">
+                      <div class="h-10 flex justify-center items-center gap-2 p-3 bg-black backdrop-blur-xl bg-opacity-80 rounded-xl">
+                        <div class="text-[#ffad49] font-light h-10 flex items-center pt-2">86%</div>
+                        <div>
+                          <svg class="w-6 h-6" fill="none" stroke="#ffad49" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
+                        </div>
+                      </div>
+                      <!-- rate imdb -->
+                      <div class="flex justify-center items-center gap-1 pt-2">
+                        <div class="font-normal">7.5</div>
+                        <div>
+                          <svg class="mb-2.5 w-5 h-5 fill-[#D97706]"w xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"/></svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide w-1/3">
+                <a href="javascript:void(0)" class="w-full  flex justify-center">
+                  <div class="w-[200px] relative">
+                    <!-- img -->
+                    <img class="w-full rounded-xl overflow-hidden" src="assets/img/slider-card-4.jpg" alt="">
+                    <!-- top -->
+                    <div href="#" class="flex justify-center">
+                      <div class="absolute -top-3 bg-[#279A2D] text-white font-extralight px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
+                    </div>
+                    <!-- save -->
+                    <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-gray-100 !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute top-1 left-1 border w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
+                      <svg x-show="!active" class="fill-white h-[16px] w-[16px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M320 0H64C28.72 0 0 28.7 0 64v431.1c0 5.844 3.188 11.23 8.312 14.04c5.125 2.781 11.34 2.562 16.28-.5313L192 402.1l167.4 106.5C362 511.2 365 512 368 512c2.656 0 5.281-.6562 7.688-1.969C380.8 507.2 384 501.8 384 495.1V64C384 28.7 355.3 0 320 0zM352 466.9l-151.4-96.36C197.1 368.8 195 368 192 368s-5.969 .8281-8.594 2.5L32 466.9V64c0-17.64 14.34-32 32-32h256c17.66 0 32 14.36 32 32V466.9z"/></svg>
+                      <svg x-show="active" class="fill-[#eb7e03] h-[15px] w-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M384 48V512l-192-112L0 512V48C0 21.5 21.5 0 48 0h288C362.5 0 384 21.5 384 48z"/></svg>
+                    </div>
+                    <!-- rate user -->
+                    <div class="relative w-full flex justify-between text-white px-2.5 bottom-12">
+                      <div class="h-10 flex justify-center items-center gap-2 p-3 bg-black backdrop-blur-xl bg-opacity-80 rounded-xl">
+                        <div class="text-[#ffad49] font-light h-10 flex items-center pt-2">86%</div>
+                        <div>
+                          <svg class="w-6 h-6" fill="none" stroke="#ffad49" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
+                        </div>
+                      </div>
+                      <!-- rate imdb -->
+                      <div class="flex justify-center items-center gap-1 pt-2">
+                        <div class="font-normal">7.5</div>
+                        <div>
+                          <svg class="mb-2.5 w-5 h-5 fill-[#D97706]"w xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"/></svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- android app download btn -->
       <div class="px-4 w-full flex justify-center md:hidden">
         <a href="javascript:void(0);" class="bg-[#279a2d] text-white font-light w-56 h-12 flex justify-center items-center rounded-xl gap-2">
@@ -438,7 +554,7 @@
         </a>
       </div>
       <!-- advanced search -->
-      <div class="mb-2.5" x-data="{showMobileAdvancedSearchMenu: false}">
+      <div class="mb-2.5 md:hidden" x-data="{showMobileAdvancedSearchMenu: false}">
         <!-- show advanced search button -->
         <div class="flex justify-center items-center mt-7">
           <div @click="showMobileAdvancedSearchMenu = true" class="w-80 md:w-96 border border-[#141822] p-4 rounded-3xl flex items-center justify-between">
@@ -521,7 +637,7 @@
         </div>
       </div>
       <!-- last serial view -->
-      <section class="pt-4 space-y-4 w-full hidden md:block container">
+      <section class="space-y-4 w-full hidden md:block container">
         <!-- header -->
         <div class="flex gap-2 mb-6  pr-2">
           <div class="bg-[#191107] w-12 h-12 rounded-full flex justify-center items-center">
@@ -805,7 +921,7 @@
               <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/slider-card-1.jpg" alt="">
               <!-- top -->
               <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
-                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">زیرنویس</div> 
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">زیرنویس</div> 
               </div>
               <!-- save -->
               <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
@@ -838,7 +954,6 @@
                   <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">اکشن</div>
                   <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">درام</div>
                   <div class="border border-gray-300 px-2 py-0.5 rounded-xl text-[#e5e5e5] font-light transition-all duration-500 hover:text-[#eb8307] hover:border-[#eb8307]">تخیلی</div>
-
                 </div>
                 <span class="text-white font-extralight">(2022)</span>
               </div>
@@ -853,7 +968,7 @@
               <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/slider-card-2.jpg" alt="">
               <!-- top -->
               <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
-                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">زیرنویس</div> 
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">زیرنویس</div> 
               </div>
               <!-- save -->
               <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
@@ -901,7 +1016,7 @@
               <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/slider-card-3.jpg" alt="">
               <!-- top -->
               <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
-                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">زیرنویس</div> 
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">زیرنویس</div> 
               </div>
               <!-- save -->
               <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
@@ -949,7 +1064,7 @@
               <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/slider-card-4.jpg" alt="">
               <!-- top -->
               <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
-                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">زیرنویس</div> 
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">زیرنویس</div> 
               </div>
               <!-- save -->
               <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
@@ -997,7 +1112,7 @@
               <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/slider-card-1.jpg" alt="">
               <!-- top -->
               <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
-                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">زیرنویس</div> 
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">زیرنویس</div> 
               </div>
               <!-- save -->
               <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
@@ -1045,7 +1160,7 @@
               <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/slider-card-6.jpg" alt="">
               <!-- top -->
               <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
-                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">زیرنویس</div> 
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">زیرنویس</div> 
               </div>
               <!-- save -->
               <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
@@ -1093,7 +1208,7 @@
               <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/slider-card-7.jpg" alt="">
               <!-- top -->
               <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
-                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">زیرنویس</div> 
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">زیرنویس</div> 
               </div>
               <!-- save -->
               <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
@@ -1161,7 +1276,7 @@
               <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/slider-card-1.jpg" alt="">
               <!-- top -->
               <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
-                <div class="absolute -top-3 bg-[#279B2C] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">دوبله</div> 
+                <div class="absolute -top-3 bg-[#279B2C] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
               </div>
               <!-- save -->
               <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
@@ -1209,7 +1324,7 @@
               <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/slider-card-4.jpg" alt="">
         <!-- top -->
               <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
-                <div class="absolute -top-3 bg-[#279B2C] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">دوبله</div> 
+                <div class="absolute -top-3 bg-[#279B2C] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
               </div>
               <!-- save -->
               <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
@@ -1257,7 +1372,7 @@
               <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/slider-card-3.jpg" alt="">
               <!-- top -->
               <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
-                <div class="absolute -top-3 bg-[#279B2C] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">دوبله</div> 
+                <div class="absolute -top-3 bg-[#279B2C] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
               </div>
               <!-- save -->
               <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
@@ -1305,7 +1420,7 @@
               <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/slider-card-6.jpg" alt="">
               <!-- top -->
               <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
-                <div class="absolute -top-3 bg-[#279B2C] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">دوبله</div> 
+                <div class="absolute -top-3 bg-[#279B2C] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
               </div>
               <!-- save -->
               <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
@@ -1353,7 +1468,7 @@
               <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/slider-card-4.jpg" alt="">
               <!-- top -->
               <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
-                <div class="absolute -top-3 bg-[#279B2C] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">دوبله</div> 
+                <div class="absolute -top-3 bg-[#279B2C] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
               </div>
               <!-- save -->
               <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
@@ -1401,7 +1516,7 @@
               <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/slider-card-2.jpg" alt="">
               <!-- top -->
               <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
-                <div class="absolute -top-3 bg-[#279B2C] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">دوبله</div> 
+                <div class="absolute -top-3 bg-[#279B2C] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
               </div>
               <!-- save -->
               <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
@@ -1467,7 +1582,7 @@
               <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/slider-card-1.jpg" alt="">
               <!-- top -->
               <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
-                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">زیرنویس</div> 
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">زیرنویس</div> 
               </div>
               <!-- save -->
               <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
@@ -1515,7 +1630,7 @@
               <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/slider-card-5.jpg" alt="">
               <!-- top -->
               <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
-                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">زیرنویس</div> 
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">زیرنویس</div> 
               </div>
               <!-- save -->
               <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
@@ -1563,7 +1678,7 @@
               <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/slider-card-3.jpg" alt="">
               <!-- top -->
               <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
-                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">زیرنویس</div> 
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">زیرنویس</div> 
               </div>
               <!-- save -->
               <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
@@ -1611,7 +1726,7 @@
               <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/slider-card-4.jpg" alt="">
               <!-- top -->
               <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
-                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">زیرنویس</div> 
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">زیرنویس</div> 
               </div>
               <!-- save -->
               <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
@@ -1659,7 +1774,7 @@
               <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/slider-card-1.jpg" alt="">
               <!-- top -->
               <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
-                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">زیرنویس</div> 
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">زیرنویس</div> 
               </div>
               <!-- save -->
               <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
@@ -1707,7 +1822,7 @@
               <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/slider-card-5.jpg" alt="">
               <!-- top -->
               <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
-                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">زیرنویس</div> 
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">زیرنویس</div> 
               </div>
               <!-- save -->
               <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
@@ -1755,7 +1870,7 @@
               <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/slider-card-4.jpg" alt="">
               <!-- top -->
               <div href="#" class="flex justify-center z-20 absolute top-0 left-1/2">
-                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[6px] ring-black rounded-full">زیرنویس</div> 
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">زیرنویس</div> 
               </div>
               <!-- save -->
               <div x-data="{active: false}" @click="active = !active" :class="active ? '!bg-white !bg-opacity-5 !border-[#ff8800]' : ''" href="#" class="absolute z-20 top-1 left-1 border border-gray-300 w-[32px] h-[32px] backdrop-blur-sm flex justify-center items-center rounded-full">
@@ -1827,7 +1942,6 @@
         </a>
       </div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
   </body>

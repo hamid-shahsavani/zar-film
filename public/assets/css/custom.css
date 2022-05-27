@@ -74,3 +74,17 @@
 .same-as-selected {
   border: 1px solid #c8730a !important;
 }
+
+/*? for intro desktop background color */
+
+@media screen and (min-width: 1024px) {
+  .desktop-intro-bg-color {
+      background: linear-gradient(270deg,#0a0d10 30%,rgba(10,13,16,0));
+  }
+}
+
+/*? intro desktop background image*/
+
+.desktop-intro-bg-img {
+  background: linear-gradient(270deg,#0a0d10 5%,rgba(10,13,16,0));
+}
