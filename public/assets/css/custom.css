@@ -79,7 +79,7 @@
 
 @media screen and (min-width: 1024px) {
   .desktop-intro-bg-color {
-      background: linear-gradient(270deg,#0a0d10 30%,rgba(10,13,16,0));
+      background: linear-gradient(270deg,#0a0d10 50%,rgba(10,13,16,0));
   }
 }
 

@@ -1,14 +1,9 @@
-
 //? reload with resize
-
 window.onresize = function(){location.reload();}
 
 //? intro slider
-
 document.addEventListener('DOMContentLoaded',()=> {
-
   //? for mobile 
-
   new Swiper(".swiper-mobile", {
     effect: 'cards',
     grabCursor: true,
@@ -23,25 +18,20 @@ document.addEventListener('DOMContentLoaded',()=> {
   });
 
   //? for desktop
-
   let swiperDesktop = new Swiper('.swiper-desktop', {
     loop: true,
     autoplay: true,
     slidesPerView: 'auto',
-    paginationClickable: true,
+    allowTouchMove: false,
     breakpoints: {
       1024: {
-        slidesPerView: 3,
-        spaceBetween: 10,
-      },
-      1350: {
         slidesPerView: 4,
         spaceBetween: 10,
       },
     },
   });
 
-  
+  //? desktop change slide and change background
   swiperDesktop.on('slideChange',() => {
     // get active card image src
     let cardActiveImgSrc = document.querySelector('.swiper-slide-active img').src.split('/');
@@ -50,12 +40,13 @@ document.addEventListener('DOMContentLoaded',()=> {
     cardSlideActiveNumber = cardActiveImgSrc.replace('.jpg','');
     // change intro bg image
     document.querySelector('#intro-bg-img').src = `assets/img/slider-background-${cardSlideActiveNumber}.jpg`;
+    // change intro card title
+    let cardTitle = document.querySelector('.swiper-slide-active .card-title').innerHTML;
+    document.querySelector('#card-slider-desktop-title').innerHTML = cardTitle;
   });
-  
 });
 
 //? mobile advanced search select items 
-
 var x, i, j, l, ll, selElmnt, a, b, c;
 x = document.getElementsByClassName("custom-select");
 l = x.length;
@@ -180,10 +171,8 @@ function filterCardInMediaQuary(id){
   }
 }
 
-document.addEventListener('DOMContentLoaded',()=>{
-  filterCardInMediaQuary('.view-card');
-  filterCardInMediaQuary('.update-card');
-  filterCardInMediaQuary('.animation-card');
-  filterCardInMediaQuary('.persian-movie-sub-card');
-  filterCardInMediaQuary('.persian-movie-dub-card');
-});
+document.addEventListener('DOMContentLoaded',filterCardInMediaQuary('.view-card'));
+document.addEventListener('DOMContentLoaded',filterCardInMediaQuary('.update-card'));
+document.addEventListener('DOMContentLoaded',filterCardInMediaQuary('.animation-card'));
+document.addEventListener('DOMContentLoaded',filterCardInMediaQuary('.persian-movie-sub-card'));
+document.addEventListener('DOMContentLoaded',filterCardInMediaQuary('.persian-movie-dub-card'));
