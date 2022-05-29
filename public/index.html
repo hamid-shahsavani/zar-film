@@ -27,7 +27,7 @@
           </div>
         </div>
       </div>
-      <!-- header top [only desktop]-->
+      <!-- header top [for desktop]-->
       <div class="h-12 bg-black hidden md:flex items-center">
         <div class="container md:px-2 h-full flex items-center gap-4">
           <a href="javascript:void(0);" class="font-light text-sm text-[#a9aaae] transition-all duration-500 hover:text-white">صفحه اصلی</a>
@@ -42,10 +42,10 @@
       <!-- header-top --->
       <div class="space-y-0.5">
         <!-- top -->
-        <div class="flex items-center justify-center bg-[#141923] h-14">
-          <div class="container px-2 pt-1 md:px-2 flex items-center" x-data="{switchToMoon: false}">
+        <div class="flex items-center justify-center bg-[#141923] h-16">
+          <div class="container w-full px-2 md:px-2 flex items-center justify-between relative" x-data="{switchToMoon: false}">
             <!-- toggle switch -->
-            <div class="flex-1">
+            <div class="md:-order-2">
               <button class="bg-[#06070A] transition-all duration-700 h-9 w-[90px] rounded-full px-[7px] flex justify-between items-center relative" @click="switchToMoon = !switchToMoon">
                 <div class="z-20">
                   <svg class="w-5 stroke-[#cbcaca] fill-[#cbcaca]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
@@ -57,13 +57,44 @@
               </button>
             </div>
             <!-- logo -->
-            <div class="flex-1 flex justify-end md:justify-center">
+            <div class="md:-order-5">
               <a href="javascript:void(0)">
                 <img class="mr-6 md:m-0" width="130" src="../public/assets/img/logo-dark.png" alt="">
               </a>
             </div>
+            <!-- category and links -->
+            <div class="md:-order-4 flex gap-6 items-center">
+              <!-- category -->
+              <div class="hidden md:flex justify-between items-center bg-black p-2.5 rounded-xl cursor-pointer">
+                <div class="flex gap-3 items-center">
+                  <svg class="fill-white w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><defs><style>.fa-secondary{opacity:.4}</style></defs><path class="fa-primary" d="M192 176C192 202.5 170.5 224 144 224H48C21.49 224 0 202.5 0 176V80C0 53.49 21.49 32 48 32H144C170.5 32 192 53.49 192 80V176zM448 432C448 458.5 426.5 480 400 480H304C277.5 480 256 458.5 256 432V336C256 309.5 277.5 288 304 288H400C426.5 288 448 309.5 448 336V432z"/><path class="fa-secondary" d="M448 184C448 206.1 430.1 224 408 224H296C273.9 224 256 206.1 256 184V72C256 49.91 273.9 32 296 32H408C430.1 32 448 49.91 448 72V184zM192 440C192 462.1 174.1 480 152 480H40C17.91 480 0 462.1 0 440V328C0 305.9 17.91 288 40 288H152C174.1 288 192 305.9 192 328V440z"/></svg>
+                  <span class="text-white font-extralight text-sm">دسته بندی ها</span>
+                </div>
+              </div>
+              <!-- links -->
+              <a href="#" class="hidden lg:block text-[#efefef] text-sm font-light">هنرمندان</a>
+              <a href="#" class="hidden lg:block text-[#efefef] text-sm font-light">پخش انلاین</a>
+            </div>
+            <!-- category menu -->
+            <div class="bg-[#151A23] hidden md:block z-50 backdrop-blur-md bg-opacity-80 w-[700px] p-5 absolute top-[73px] left-0 right-[30px] lg:right-[180px] xl:right-[210px] 2xl:right-[270px] rounded-[20px] advanced-filter-menu transition-all duration-500 desktop-category-menu">
+              <div class="w-48 h-48"></div>
+            </div>
+            <!-- search -->
+            <div class="hidden md:flex md:-order-3 items-center px-2 gap-3 bg-black h-[45px] xl:w-[400px] rounded-xl">
+              <svg class="md:hidden w-5 h-5 stroke-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+              <input type="text" placeholder="نام فیلم مورد نظر را وارد کنید ..." class="bg-transparent flex-1 font-extralight text-sm text-gray-200 outline-none">
+              <button class="bg-[#DD7D08] hidden md:block p-1 rounded-md ring-[3px] ring-[#343535]">
+                <svg class="w-5 h-5 stroke-white fill-[#DD7D08]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+              </button>
+            </div>
+            <!-- login -->
+            <div class="md:-order-1 hidden md:block">
+              <a href="javascript:void(0)" class="bg-[#E4810D] text-white font-extralight text-sm rounded-xl whitespace-nowrap py-2 px-3">
+                <span>ورود / عضویت</span>
+              </a>
+            </div>
             <!-- notification -->
-            <div class="flex-1 flex justify-end">
+            <div class="md:hidden">
               <button class="p-[7px] bg-[#07090B] rounded-lg relative">
                 <svg class="w-[25px] h-[25px]" fill="none" stroke="#CBCACA" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
                 <div class="flex justify-center items-center absolute -right-2 -top-1 text-xs bg-[#E7830A] px-1.5 pt-0.5 rounded-md text-white font-extralight">
@@ -73,8 +104,8 @@
             </div>
           </div>
         </div>
-        <!-- bottom -->
-        <div class="flex items-center bg-[#141923] h-16 w-full">
+        <!-- bottom [for mobile] -->
+        <div class="md:hidden flex items-center bg-[#141923] h-16 w-full">
           <div class="container flex items-center gap-2 px-2">
             <!-- search -->
             <div class="flex items-center px-2 gap-3 bg-black w-full h-[41px] md:h-[45px] rounded-xl">
@@ -93,7 +124,7 @@
           </div>
         </div>
       </div>
-      <!-- header-bottom -->
+      <!-- header-bottom [for mobile] -->
       <div x-data="{showMobileMenu: false}">
         <!-- mobile menu-bottom -->
         <div class="fixed right-0 left-0 bottom-0 md:hidden z-50">
@@ -114,7 +145,7 @@
             </li>
             <li class="flex-1">
               <a href="javascript:void(0)" class="space-y-[5px] flex flex-col items-center">
-                <svg class="w-6 h-6" fill="none" stroke="#e5e5e5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1352 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <svg class="w-6 h-6" fill="none" stroke="#e5e5e5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 <div class="font-light text-sm text-[#e5e5e5]">پخش آنلاین</div>
               </a>
             </li>
@@ -180,7 +211,7 @@
                   <span class="text-white font-light">دسته بندی ها</span>
                 </div>
                 <div class="bg-slate-700 bg-opacity-40 w-8 h-8 rounded-full flex justify-center items-center">
-                  <svg :class="showSub ? 'rotate-180' : ''" class="w-6 h-6 fill-white transition-all duration-500" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1307 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg>
+                  <svg :class="showSub ? 'rotate-180' : ''" class="w-6 h-6 stroke-white fill-transparent transition-all duration-500" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
                 </div>
               </div>
               <!-- category -->
@@ -190,10 +221,9 @@
                     <!-- button for show list -->
                     <div @click="active = !active" class="flex items-center justify-between opacity-0 transition-all duration-500" :class="showSub ? 'opacity-100' : ''">
                       <div class="flex gap-2 items-center">
-                        <svg class="w-6 h-6 stroke-slate-300" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
                         <span class="text-white font-light">بخش ها</span>
                       </div>
-                      <svg :class="active ? '!rotate-180' : ''" class="w-6 h-6 transition-all duration-500 fill-white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1307 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg>
+                      <svg :class="active ? '!rotate-180' : ''" class="w-6 h-6 transition-all duration-500 stroke-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
                     </div>
                     <!-- list -->
                     <ul class="h-0 opacity-0 overflow-hidden transition-all duration-500" :class="active ? 'space-y-3 my-2 h-auto opacity-100' : ''" x-data="{}">
@@ -218,7 +248,7 @@
                       <svg class="w-6 h-6 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><style>.fa-secondary{opacity:.4}</style></defs><path class="fa-primary" d="M360 144h-208C138.8 144 128 154.8 128 168S138.8 192 152 192h208C373.3 192 384 181.3 384 168S373.3 144 360 144zM264 240h-112C138.8 240 128 250.8 128 264S138.8 288 152 288h112C277.3 288 288 277.3 288 264S277.3 240 264 240z"/><path class="fa-secondary" d="M447.1 0h-384c-35.25 0-64 28.75-64 63.1v287.1c0 35.25 28.75 63.1 64 63.1h96v83.1c0 9.75 11.25 15.45 19.12 9.7l124.9-93.7h144c35.25 0 64-28.75 64-63.1V63.1C511.1 28.75 483.2 0 447.1 0zM264 288h-112C138.8 288 128 277.3 128 264S138.8 240 152 240h112C277.3 240 288 250.8 288 264S277.3 288 264 288zM360 192h-208C138.8 192 128 181.3 128 168S138.8 144 152 144h208C373.3 144 384 154.8 384 168S373.3 192 360 192z"/></svg>
                       <span class="text-white font-light">تماس با ما</span>
                     </div>
-                    <svg class="w-6 h-6 fill-white -rotate-90" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1307 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg>
+                    <svg class="w-6 h-6 stroke-[#eee] fill-transparent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                   </div>
                 </a>
               </template>

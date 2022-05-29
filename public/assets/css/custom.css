@@ -120,3 +120,15 @@
   position: absolute;
   z-index: 2;
 }
+
+/*? after for category menu desktop */
+
+.desktop-category-menu::before{
+  left: 71%;
+}
+
+@media screen and (min-width: 1024px) {
+  .desktop-category-menu::before{
+    left: 88%;
+  }
+}
