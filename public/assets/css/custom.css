@@ -1,4 +1,4 @@
-/*? for advanced search mobile drop down select */
+/*? advanced search mobile drop down select */
 
 * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -16,6 +16,7 @@
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
   padding: 14px !important;
+  overflow: hidden;
   font-size: 14px !important;
 }
 
@@ -86,5 +87,35 @@
 /*? intro desktop background image*/
 
 .desktop-intro-bg-img {
-  background: linear-gradient(270deg,#0a0d10 5%,rgba(10,13,16,0));
+  background: linear-gradient(270deg,#0a0d10 0.1%,rgba(10,13,16,0));
+  z-index: 10;
+}
+
+/*? select drop down desktop advanced search */
+
+.search-advanced-desktop .select-selected {
+  border-radius: 20px;
+}
+
+.search-advanced-desktop .select-selected:after {
+  position: absolute;
+  top: 24%;
+}
+
+.advanced-filter-dropdown .select-selected:after {
+  position: absolute;
+  top: 20%;
+}
+
+/*? after psudo for advanced-filter menu desktop */
+
+.advanced-filter-menu::before{
+  border: 15px solid transparent;
+  border-bottom-color: #0f121b;
+  bottom: 100%;
+  content: "";
+  display: block;
+  left: 18%;
+  position: absolute;
+  z-index: 2;
 }

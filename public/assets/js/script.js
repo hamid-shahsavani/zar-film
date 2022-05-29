@@ -1,53 +1,38 @@
-//? reload with resize
-window.onresize = function(){location.reload();}
 
-//? intro slider
-document.addEventListener('DOMContentLoaded',()=> {
-  //? for mobile 
-  new Swiper(".swiper-mobile", {
-    effect: 'cards',
-    grabCursor: true,
-    keyboard: true,
-    centeredSlides: true,
-    slidesPerView: 'auto',
-    spaceBetween: 10,
-    loop: true,
-    autoplay: {
-        delay: 2000,
-    },
+//* func - add active tab with click
+
+function activeTabWithClick(id,style){
+  let select = Array.from(document.querySelectorAll(id));
+  const handleClick = (e) => {
+    select.forEach(i => {
+      i.classList.remove(style);
+    });
+    e.currentTarget.classList.add(style);
+  }
+  select.forEach(i => {
+    i.addEventListener('click', handleClick)
   });
+}
 
-  //? for desktop
-  let swiperDesktop = new Swiper('.swiper-desktop', {
-    loop: true,
-    autoplay: true,
-    slidesPerView: 'auto',
-    allowTouchMove: false,
-    breakpoints: {
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 10,
-      },
-    },
+//* func - show and hide menu button click 
+
+function showAndHideMenuBtnClick(btn,menu) {
+  let selectId = document.querySelector(btn,menu);
+  let menuSelect = document.querySelector(menu);
+  selectId.addEventListener('click',()=>{
+    if((menuSelect.classList.contains('!opacity-100')) && (menuSelect.classList.contains('!visible'))){
+      menuSelect.classList.remove('!opacity-100');
+      menuSelect.classList.remove('!visible');
+    } else {
+      menuSelect.classList.add('!opacity-100');
+      menuSelect.classList.add('!visible');
+    }
   });
+}
 
-  //? desktop change slide and change background
-  swiperDesktop.on('slideChange',() => {
-    // get active card image src
-    let cardActiveImgSrc = document.querySelector('.swiper-slide-active img').src.split('/');
-    cardActiveImgSrc = cardActiveImgSrc[cardActiveImgSrc.length - 1];
-    cardActiveImgSrc = cardActiveImgSrc.replace('slider-card-','');
-    cardSlideActiveNumber = cardActiveImgSrc.replace('.jpg','');
-    // change intro bg image
-    document.querySelector('#intro-bg-img').src = `assets/img/slider-background-${cardSlideActiveNumber}.jpg`;
-    // change intro card title
-    let cardTitle = document.querySelector('.swiper-slide-active .card-title').innerHTML;
-    document.querySelector('#card-slider-desktop-title').innerHTML = cardTitle;
-  });
-});
+//? advanced search select items drop-down
 
-//? mobile advanced search select items 
-var x, i, j, l, ll, selElmnt, a, b, c;
+let x, i, j, l, ll, selElmnt, a, b, c;
 x = document.getElementsByClassName("custom-select");
 l = x.length;
 for (i = 0; i < l; i++) {
@@ -113,6 +98,58 @@ function closeAllSelect(elmnt) {
 }
 document.addEventListener("click", closeAllSelect);
 
+//? reload with resize
+window.onresize = function(){location.reload();}
+
+//? intro slider
+document.addEventListener('DOMContentLoaded',()=> {
+  //? for mobile 
+  new Swiper(".swiper-mobile", {
+    effect: 'cards',
+    grabCursor: true,
+    keyboard: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    spaceBetween: 10,
+    loop: true,
+    autoplay: {
+        delay: 2000,
+    },
+  });
+
+  //? for desktop
+  let swiperDesktop = new Swiper('.swiper-desktop', {
+    loop: true,
+    autoplay: true,
+    slidesPerView: 'auto',
+    allowTouchMove: false,
+    speed: 500,
+    breakpoints: {
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 10,
+      },
+    },
+  });
+
+  //? desktop change slide and change background
+  swiperDesktop.on('slideChange',() => {
+    // get active card image src
+    let cardActiveImgSrc = document.querySelector('.swiper-slide-active img').src.split('/');
+    cardActiveImgSrc = cardActiveImgSrc[cardActiveImgSrc.length - 1];
+    cardActiveImgSrc = cardActiveImgSrc.replace('slider-card-','');
+    cardSlideActiveNumber = cardActiveImgSrc.replace('.jpg','');
+    // change intro bg image
+    let backgroundImgSrc = document.querySelector('#intro-bg-img');
+
+    backgroundImgSrc.src = `assets/img/slider-background-${cardSlideActiveNumber}.jpg`;
+
+    // change intro card title
+    let cardTitle = document.querySelector('.swiper-slide-active .card-title').innerHTML;
+    document.querySelector('#card-slider-desktop-title').innerHTML = cardTitle;
+  });
+});
+
 //? filter card in media quary
 
 function filterCardInMediaQuary(id){
@@ -176,3 +213,11 @@ document.addEventListener('DOMContentLoaded',filterCardInMediaQuary('.update-car
 document.addEventListener('DOMContentLoaded',filterCardInMediaQuary('.animation-card'));
 document.addEventListener('DOMContentLoaded',filterCardInMediaQuary('.persian-movie-sub-card'));
 document.addEventListener('DOMContentLoaded',filterCardInMediaQuary('.persian-movie-dub-card'));
+
+//? active active search desktop tab
+
+activeTabWithClick('#advanced-category-base > button','bg-[#EA8308]');
+
+//? show and hide advanced filter desktop menu
+
+showAndHideMenuBtnClick('#advanced-filter-btn','.advanced-filter-menu');
