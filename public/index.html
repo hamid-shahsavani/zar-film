@@ -14,11 +14,11 @@
   <body class="bg-[#000101] overflow-x-hidden">
     <header>
       <!-- top-message -->
-      <div x-data="{hideTop: false}" class="w-full z-50 bg-amber-600 text-slate-200" :class="hideTop ? 'hidden' : ''" id="top-message">
+      <div x-data="{hideTop: false}" class="w-full z-50 bg-amber-700 text-slate-200" :class="hideTop ? 'hidden' : ''" id="top-message">
         <div class="container px-3 md:px-2 flex h-10 items-center">
           <div class="w-[97%] flex items-center justify-center">
             <span class="font-light">دریافت ادرس های جدید در تلگرام!</span>
-            <a href="javascript:void(0)" class="mr-4 px-3 py-0.5 rounded-lg bg-amber-700 bg-opacity-60 font-light">عضویت</a>
+            <a href="javascript:void(0)" class="mr-4 px-3 py-0.5 rounded-lg bg-amber-800 bg-opacity-60 font-light">عضویت</a>
           </div>
           <div class="w-[3%] flex justify-end">
             <button @click="hideTop = true" class="flex justify-start border border-slate-200 p-1 rounded-lg">
@@ -77,9 +77,12 @@
         <div class="flex items-center bg-[#141923] h-16 w-full">
           <div class="container flex items-center gap-2 px-2">
             <!-- search -->
-            <div class="flex items-center px-3 gap-3 bg-black w-full h-[41px] rounded-xl">
-              <svg class="w-5 h-5 stroke-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            <div class="flex items-center px-2 gap-3 bg-black w-full h-[41px] md:h-[45px] rounded-xl">
+              <svg class="md:hidden w-5 h-5 stroke-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
               <input type="text" placeholder="نام فیلم مورد نظر را وارد کنید ..." class="bg-transparent flex-1 font-extralight text-sm text-gray-200 outline-none">
+              <button class="bg-[#DD7D08] hidden md:block p-1.5 rounded-md ring-[3px] ring-[#343535]">
+                <svg class="w-5 h-5 stroke-white fill-[#DD7D08]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+              </button>
             </div>
             <!-- login -->
             <div>
@@ -677,7 +680,7 @@
             </div>
           </div>
           <!-- select toggle -->
-          <div x-data="{active: false}" @click="active = !active" class="p-3 cursor-pointer bg-opacity-80 rounded-xl xl:flex items-center justify-between gap-3 text-white text-sm">
+          <div x-data="{active: false}" @click="active = !active" class="!hidden xl:!flex p-3 cursor-pointer bg-opacity-80 rounded-xl items-center justify-between gap-3 text-white text-sm">
             <span>دوبله فارسی</span>
             <!-- toggle switch -->
             <div>
@@ -686,7 +689,7 @@
               </button>
             </div>
           </div>
-          <div x-data="{active: false}" @click="active = !active" class="p-3 cursor-pointer bg-opacity-80 rounded-xl xl:flex items-center justify-between gap-3 text-white text-sm">
+          <div x-data="{active: false}" @click="active = !active" class="!hidden 2xl:!flex p-3 cursor-pointer bg-opacity-80 rounded-xl items-center justify-between gap-3 text-white text-sm">
             <span>زیرنویس چسبیده</span>
             <!-- toggle switch -->
             <div>

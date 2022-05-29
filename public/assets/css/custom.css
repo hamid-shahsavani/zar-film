@@ -95,6 +95,7 @@
 
 .search-advanced-desktop .select-selected {
   border-radius: 20px;
+  width: 100%;
 }
 
 .search-advanced-desktop .select-selected:after {
