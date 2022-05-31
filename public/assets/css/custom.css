@@ -1,9 +1,5 @@
 /*? advanced search mobile drop down select */
 
-li::marker {
-  margin: 0 !important;
-}
-
 * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
@@ -135,18 +131,6 @@ li::marker {
   .desktop-category-menu::before{
     left: 88%;
   }
-}
-
-/*? show and hide element */
-
-.hide {
-  visibility: hidden;
-  opacity: 0;
-}
-
-.show {
-  visibility: visible !important;
-  opacity: 1 !important;
 }
 
 /*? active style for desktop category item */
