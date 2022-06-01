@@ -301,10 +301,10 @@
           <!-- tabs -->
           <ul class="absolute top-[13px] w-full flex justify-around">
             <li class="flex-1">
-              <a id="mobile-bottom-menu-btn" href="javascript:void(0);" class="space-y-[5px] flex flex-col items-center">
-                <svg id="mobile-bottom-menu-icon-one" class="w-6 h-6 stroke-[#e5e5e5]" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                <div id="mobile-bottom-menu-text" class="font-light text-sm text-[#e5e5e5]">منو</div>
-                <div id="mobile-bottom-menu-icon-two" class="mt-5 w-1.5 h-1.5 bg-[#eb8307] rounded-full hidden"></div>
+              <a id="myn-btn" href="javascript:void(0);" class="space-y-[5px] flex flex-col items-center">
+                <svg id="myn-icon-one" class="w-6 h-6 stroke-[#e5e5e5]" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <div id="myn-text" class="font-light text-sm text-[#e5e5e5]">منو</div>
+                <div id="myn-icon-two" class="mt-5 w-1.5 h-1.5 bg-[#eb8307] rounded-full hidden"></div>
               </a>
             </li>
             <li class="flex-1">
@@ -333,7 +333,7 @@
           </ul>
         </div>
         <!-- mobile menu (with active menu tab) -->
-        <div id="mobile-bottom-menu" class="z-40 fixed p-3 pt-4 top-0 transition-all duration-500 opacity-0 -right-72 h-full w-64 bg-[rgba(20,24,33,.9)] backdrop-blur-md space-y-6">
+        <div id="myn" class="z-40 fixed p-3 pt-4 top-0 transition-all duration-500 opacity-0 -right-72 h-full w-64 bg-[rgba(20,24,33,.9)] backdrop-blur-md space-y-6">
           <!-- header -->
           <div class="flex items-center justify-between px-1">
             <!-- logo -->
@@ -341,7 +341,7 @@
               <img src="assets/img/logo-dark.png" alt="">
             </a>
             <!-- close button -->
-            <div id="mobile-bottom-menu-close-btn" class="bg-[#1b2230] shadow-lg shadow-[#131920] p-1.5 rounded-xl">
+            <div id="myn-close-btn" class="bg-[#1b2230] shadow-lg shadow-[#131920] p-1.5 rounded-xl">
               <div class="border-2 p-0.5 border-[#efefef] rounded-lg">
                 <svg class="w-5 h-5 stroke-[#efefef]" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
               </div>
@@ -369,28 +369,28 @@
             <!-- show category button -->
             <div class="bg-[#0F141A] shadow-lg shadow-[#131920] w-full p-3 rounded-2xl flex flex-col cursor-pointer">
               <!-- button for show sub-menu -->
-              <div id="mobile-bottom-menu-show-sub-btn" class="flex justify-between items-center w-full">
+              <div id="myn-show-sub-btn" class="flex justify-between items-center w-full">
                 <div class="flex gap-2 items-center">
                   <svg class="fill-white w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><defs><style>.fa-secondary{opacity:.4}</style></defs><path class="fa-primary" d="M192 176C192 202.5 170.5 224 144 224H48C21.49 224 0 202.5 0 176V80C0 53.49 21.49 32 48 32H144C170.5 32 192 53.49 192 80V176zM448 432C448 458.5 426.5 480 400 480H304C277.5 480 256 458.5 256 432V336C256 309.5 277.5 288 304 288H400C426.5 288 448 309.5 448 336V432z"/><path class="fa-secondary" d="M448 184C448 206.1 430.1 224 408 224H296C273.9 224 256 206.1 256 184V72C256 49.91 273.9 32 296 32H408C430.1 32 448 49.91 448 72V184zM192 440C192 462.1 174.1 480 152 480H40C17.91 480 0 462.1 0 440V328C0 305.9 17.91 288 40 288H152C174.1 288 192 305.9 192 328V440z"/></svg>
                   <span class="text-white font-light">دسته بندی ها</span>
                 </div>
                 <div class="bg-slate-700 bg-opacity-40 w-8 h-8 rounded-full flex justify-center items-center">
-                  <svg id="mobile-bottom-menu-chevron" class="w-6 h-6 stroke-white fill-transparent transition-all duration-500" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+                  <svg id="myn-chevron" class="w-6 h-6 stroke-white fill-transparent transition-all duration-500" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
                 </div>
               </div>
               <!-- category -->
-              <div id="mobile-bottom-menu-sub-menu" class="h-0 overflow-hidden transition-all duration-500">
+              <div id="myn-sub-menu" class="h-0 overflow-hidden transition-all duration-500">
                 <div class="p-3 rounded-lg transition-all duration-500 bg-[#090c10]">
                   <!-- button for show list -->
-                  <div class="flex items-center justify-between mobile-bottom-menu-item-1-btn">
+                  <div class="flex items-center justify-between myn-item-1-btn">
                     <div class="flex gap-2 items-center">
                       <svg class='w-6 h-6 fill-white' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><defs><style>.fa-secondary{opacity:.4}</style></defs><path class="fa-primary" d="M208 320h-128C71.16 320 64 327.2 64 336S71.16 352 80 352h128c8.838 0 16-7.164 16-16S216.8 320 208 320zM304 224h-224C71.16 224 64 231.2 64 240S71.16 256 80 256h224C312.8 256 320 248.8 320 240S312.8 224 304 224zM304 128h-224C71.16 128 64 135.2 64 144S71.16 160 80 160h224C312.8 160 320 152.8 320 144S312.8 128 304 128z"/><path class="fa-secondary" d="M320 0H64C28.65 0 0 28.65 0 64v384c0 35.35 28.65 64 64 64h256c35.35 0 64-28.65 64-64V64C384 28.65 355.3 0 320 0zM208 352h-128C71.16 352 64 344.8 64 336S71.16 320 80 320h128c8.838 0 16 7.164 16 16S216.8 352 208 352zM304 256h-224C71.16 256 64 248.8 64 240S71.16 224 80 224h224C312.8 224 320 231.2 320 240S312.8 256 304 256zM304 160h-224C71.16 160 64 152.8 64 144S71.16 128 80 128h224C312.8 128 320 135.2 320 144S312.8 160 304 160z"/></svg>
                       <span class="text-white font-light">بخش ها</span>
                     </div>
-                    <svg class="mobile-bottom-menu-item-1-chevron w-6 h-6 transition-all duration-500 stroke-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+                    <svg class="myn-item-1-chevron w-6 h-6 transition-all duration-500 stroke-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
                   </div>
                   <!-- list -->
-                  <ul class="h-0 opacity-0 overflow-hidden transition-all duration-500 mobile-bottom-menu-item-1-list">
+                  <ul class="h-0 opacity-0 overflow-hidden transition-all duration-500 myn-item-1-list">
                     <li>
                       <a class="border-r-2 border-[#eb8307] pr-2 mr-1" href="javascript:void(0);">
                         <span class="text-sm text-white">فیلم ها (135,32)</span>
@@ -420,15 +420,15 @@
                 </div>
                 <div class="p-3 rounded-lg transition-all duration-500 bg-[#090c10]">
                   <!-- button for show list -->
-                  <div class="flex items-center justify-between mobile-bottom-menu-item-2-btn">
+                  <div class="flex items-center justify-between myn-item-2-btn">
                     <div class="flex gap-2 items-center">
                       <svg class='w-6 h-6 fill-white' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><defs><style>.fa-secondary{opacity:.4}</style></defs><path class="fa-primary" d="M208 320h-128C71.16 320 64 327.2 64 336S71.16 352 80 352h128c8.838 0 16-7.164 16-16S216.8 320 208 320zM304 224h-224C71.16 224 64 231.2 64 240S71.16 256 80 256h224C312.8 256 320 248.8 320 240S312.8 224 304 224zM304 128h-224C71.16 128 64 135.2 64 144S71.16 160 80 160h224C312.8 160 320 152.8 320 144S312.8 128 304 128z"/><path class="fa-secondary" d="M320 0H64C28.65 0 0 28.65 0 64v384c0 35.35 28.65 64 64 64h256c35.35 0 64-28.65 64-64V64C384 28.65 355.3 0 320 0zM208 352h-128C71.16 352 64 344.8 64 336S71.16 320 80 320h128c8.838 0 16 7.164 16 16S216.8 352 208 352zM304 256h-224C71.16 256 64 248.8 64 240S71.16 224 80 224h224C312.8 224 320 231.2 320 240S312.8 256 304 256zM304 160h-224C71.16 160 64 152.8 64 144S71.16 128 80 128h224C312.8 128 320 135.2 320 144S312.8 160 304 160z"/></svg>
                       <span class="text-white font-light">بخش ها</span>
                     </div>
-                    <svg class="mobile-bottom-menu-item-2-chevron w-6 h-6 transition-all duration-500 stroke-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+                    <svg class="myn-item-2-chevron w-6 h-6 transition-all duration-500 stroke-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
                   </div>
                   <!-- list -->
-                  <ul class="h-0 opacity-0 overflow-hidden transition-all duration-500 mobile-bottom-menu-item-2-list">
+                  <ul class="h-0 opacity-0 overflow-hidden transition-all duration-500 myn-item-2-list">
                     <li>
                       <a class="border-r-2 border-[#eb8307] pr-2 mr-1" href="javascript:void(0);">
                         <span class="text-sm text-white">فیلم ها (135,32)</span>
@@ -458,15 +458,15 @@
                 </div>
                 <div class="p-3 rounded-lg transition-all duration-500 bg-[#090c10]">
                   <!-- button for show list -->
-                  <div class="flex items-center justify-between mobile-bottom-menu-item-3-btn">
+                  <div class="flex items-center justify-between myn-item-3-btn">
                     <div class="flex gap-2 items-center">
                       <svg class='w-6 h-6 fill-white' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><defs><style>.fa-secondary{opacity:.4}</style></defs><path class="fa-primary" d="M208 320h-128C71.16 320 64 327.2 64 336S71.16 352 80 352h128c8.838 0 16-7.164 16-16S216.8 320 208 320zM304 224h-224C71.16 224 64 231.2 64 240S71.16 256 80 256h224C312.8 256 320 248.8 320 240S312.8 224 304 224zM304 128h-224C71.16 128 64 135.2 64 144S71.16 160 80 160h224C312.8 160 320 152.8 320 144S312.8 128 304 128z"/><path class="fa-secondary" d="M320 0H64C28.65 0 0 28.65 0 64v384c0 35.35 28.65 64 64 64h256c35.35 0 64-28.65 64-64V64C384 28.65 355.3 0 320 0zM208 352h-128C71.16 352 64 344.8 64 336S71.16 320 80 320h128c8.838 0 16 7.164 16 16S216.8 352 208 352zM304 256h-224C71.16 256 64 248.8 64 240S71.16 224 80 224h224C312.8 224 320 231.2 320 240S312.8 256 304 256zM304 160h-224C71.16 160 64 152.8 64 144S71.16 128 80 128h224C312.8 128 320 135.2 320 144S312.8 160 304 160z"/></svg>
                       <span class="text-white font-light">بخش ها</span>
                     </div>
-                    <svg class="mobile-bottom-menu-item-3-chevron w-6 h-6 transition-all duration-500 stroke-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+                    <svg class="myn-item-3-chevron w-6 h-6 transition-all duration-500 stroke-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
                   </div>
                   <!-- list -->
-                  <ul class="h-0 opacity-0 overflow-hidden transition-all duration-500 mobile-bottom-menu-item-3-list">
+                  <ul class="h-0 opacity-0 overflow-hidden transition-all duration-500 myn-item-3-list">
                     <li>
                       <a class="border-r-2 border-[#eb8307] pr-2 mr-1" href="javascript:void(0);">
                         <span class="text-sm text-white">فیلم ها (135,32)</span>
@@ -905,21 +905,21 @@
             </select>
           </div>
           <!-- active tab with toggle switch -->
-          <div id="mobileAdvancedSearchMenuToggleSwitchPersianDub" class="p-3 cursor-pointer bg-opacity-80 bg-black rounded-xl flex items-center justify-between text-white text-xs">
+          <div id="xtw" class="p-3 cursor-pointer bg-opacity-80 bg-black rounded-xl flex items-center justify-between text-white text-xs">
             <span>دوبله فارسی</span>
             <!-- toggle switch -->
             <div>
-              <button id="mobileAdvancedSearchMenuToggleSwitchPersianDubBorder" class="bg-transparent border-4 border-[#646464] h-6 w-[40px] rounded-full px-[7px] flex justify-between items-center relative">
-                <div id="mobileAdvancedSearchMenuToggleSwitchPersianDubCircle" class="right-[17px] absolute z-10 bg-[#646464] h-3 w-3 rounded-full flex items-center justify-center"></div>
+              <button id="xtwBorder" class="bg-transparent border-4 border-[#646464] h-6 w-[40px] rounded-full px-[7px] flex justify-between items-center relative">
+                <div id="xtwCircle" class="right-[17px] absolute z-10 bg-[#646464] h-3 w-3 rounded-full flex items-center justify-center"></div>
               </button>
             </div>
           </div>
-          <div id="mobileAdvancedSearchMenuToggleSwitchSubTitle" class="p-3 cursor-pointer bg-opacity-80 bg-black rounded-xl flex items-center justify-between text-white text-xs">
+          <div id="rhp" class="p-3 cursor-pointer bg-opacity-80 bg-black rounded-xl flex items-center justify-between text-white text-xs">
             <span>زیرنویس</span>
             <!-- toggle switch -->
             <div>
-              <button id="mobileAdvancedSearchMenuToggleSwitchSubTitleBorder" class="bg-transparent border-4 border-[#646464] h-6 w-[40px] rounded-full px-[7px] flex justify-between items-center relative">
-                <div id="mobileAdvancedSearchMenuToggleSwitchSubTitleCircle" class="right-[17px] absolute z-10 bg-[#646464] h-3 w-3 rounded-full flex items-center justify-center"></div>
+              <button id="rhpBorder" class="bg-transparent border-4 border-[#646464] h-6 w-[40px] rounded-full px-[7px] flex justify-between items-center relative">
+                <div id="rhpCircle" class="right-[17px] absolute z-10 bg-[#646464] h-3 w-3 rounded-full flex items-center justify-center"></div>
               </button>
             </div>
           </div>
@@ -967,35 +967,35 @@
             </div>
           </div>
           <!-- select toggle -->
-          <div id="desktopAdvancedSearchMenuToggleSwitchPersianDub" class="!hidden xl:!flex p-3 cursor-pointer bg-opacity-80 rounded-xl items-center justify-between gap-3 text-white text-sm">
+          <div id="sxa" class="!hidden xl:!flex p-3 cursor-pointer bg-opacity-80 rounded-xl items-center justify-between gap-3 text-white text-sm">
             <span>دوبله فارسی</span>
             <!-- toggle switch -->
             <div>
-              <button id="desktopAdvancedSearchMenuToggleSwitchPersianDubBorder" class="bg-transparent border-4 border-[#646464] h-6 w-[40px] rounded-full px-[7px] flex justify-between items-center relative">
-                <div id="desktopAdvancedSearchMenuToggleSwitchPersianDubCircle" class="right-[17px] absolute z-10 bg-[#646464] h-3 w-3 rounded-full flex items-center justify-center"></div>
+              <button id="sxaBorder" class="bg-transparent border-4 border-[#646464] h-6 w-[40px] rounded-full px-[7px] flex justify-between items-center relative">
+                <div id="sxaCircle" class="right-[17px] absolute z-10 bg-[#646464] h-3 w-3 rounded-full flex items-center justify-center"></div>
               </button>
             </div>
           </div>
-          <div id="desktopAdvancedSearchMenuToggleSwitchSubTitle" class="!hidden 2xl:!flex p-3 cursor-pointer bg-opacity-80 rounded-xl items-center justify-between gap-3 text-white text-sm">
+          <div id="sfr" class="!hidden 2xl:!flex p-3 cursor-pointer bg-opacity-80 rounded-xl items-center justify-between gap-3 text-white text-sm">
             <span>زیرنویس چسبیده</span>
             <!-- toggle switch -->
             <div>
-              <button id="desktopAdvancedSearchMenuToggleSwitchSubTitleBorder" class="bg-transparent border-4 border-[#646464] h-6 w-[40px] rounded-full px-[7px] flex justify-between items-center relative">
-                <div id="desktopAdvancedSearchMenuToggleSwitchSubTitleCircle" class="right-[17px] absolute z-10 bg-[#646464] h-3 w-3 rounded-full flex items-center justify-center"></div>
+              <button id="sfrBorder" class="bg-transparent border-4 border-[#646464] h-6 w-[40px] rounded-full px-[7px] flex justify-between items-center relative">
+                <div id="sfrCircle" class="right-[17px] absolute z-10 bg-[#646464] h-3 w-3 rounded-full flex items-center justify-center"></div>
               </button>
             </div>
           </div>
-          <div id="desktopAdvancedSearchMenuToggleSwitchOnlinePlay" class="!flex p-3 cursor-pointer bg-opacity-80 rounded-xl items-center justify-between gap-3 text-white text-sm">
+          <div id="umk" class="!flex p-3 cursor-pointer bg-opacity-80 rounded-xl items-center justify-between gap-3 text-white text-sm">
             <span>پخش انلاین</span>
             <!-- toggle switch -->
             <div>
-              <button id="desktopAdvancedSearchMenuToggleSwitchOnlinePlayBorder" class="bg-transparent border-4 border-[#646464] h-6 w-[40px] rounded-full px-[7px] flex justify-between items-center relative">
-                <div id="desktopAdvancedSearchMenuToggleSwitchOnlinePlayCircle" class="right-[17px] absolute z-10 bg-[#646464] h-3 w-3 rounded-full flex items-center justify-center"></div>
+              <button id="umkBorder" class="bg-transparent border-4 border-[#646464] h-6 w-[40px] rounded-full px-[7px] flex justify-between items-center relative">
+                <div id="umkCircle" class="right-[17px] absolute z-10 bg-[#646464] h-3 w-3 rounded-full flex items-center justify-center"></div>
               </button>
             </div>
           </div>
           <!-- advanced filter button -->
-          <button id="advanced-filter-btn" class="w-[165px] cursor-pointer h-full p-3 bg-black rounded-3xl flex items-center justify-between">
+          <button id="ias-btn" class="w-[165px] cursor-pointer h-full p-3 bg-black rounded-3xl flex items-center justify-between">
             <div>
               <p class="text-[#e5e5e5] font-extralight text-sm">فیلتر های پیشرفته</p>
             </div>
@@ -1004,10 +1004,10 @@
             </div>
           </button>
           <!-- advanced filter menu -->
-          <div id="advanced-filter-menu-desktop" class="triangle bg-[#151A23] backdrop-blur-sm bg-opacity-90 w-full p-5 absolute top-32 left-0 right-0 rounded-[20px] transition-all duration-500 invisible opacity-0">
+          <div id="ias-menu-desktop" class="triangle bg-[#151A23] backdrop-blur-sm bg-opacity-90 w-full p-5 absolute top-32 left-0 right-0 rounded-[20px] transition-all duration-500 invisible opacity-0">
             <div class="grid grid-cols-4 xl:grid-cols-6 gap-6">
               <!-- select drop-down -->
-              <div class="advanced-filter-dropdown custom-select relative bg-black rounded-[15px] h-full flex items-center cursor-pointer">
+              <div class="ias-dropdown custom-select relative bg-black rounded-[15px] h-full flex items-center cursor-pointer">
                 <select class="hidden">
                   <option value="0">ترتیب نمایش</option>
                   <option value="1">همه</option>
@@ -1017,7 +1017,7 @@
                   <option value="5">انیمیشن</option>
                 </select>
               </div>
-              <div class="advanced-filter-dropdown custom-select relative bg-black rounded-[15px] h-full flex items-center cursor-pointer">
+              <div class="ias-dropdown custom-select relative bg-black rounded-[15px] h-full flex items-center cursor-pointer">
                 <select class="hidden">
                   <option value="0">شبکه</option>
                   <option value="1">همه</option>
@@ -1027,7 +1027,7 @@
                   <option value="5">انیمیشن</option>
                 </select>
               </div>
-              <div class="advanced-filter-dropdown custom-select relative bg-black rounded-[15px] h-full flex items-center cursor-pointer">
+              <div class="ias-dropdown custom-select relative bg-black rounded-[15px] h-full flex items-center cursor-pointer">
                 <select class="hidden">
                   <option value="0">ترتیب نمایش</option>
                   <option value="1">همه</option>
@@ -1037,7 +1037,7 @@
                   <option value="5">انیمیشن</option>
                 </select>
               </div>
-              <div class="advanced-filter-dropdown custom-select relative bg-black rounded-[15px] h-full flex items-center cursor-pointer">
+              <div class="ias-dropdown custom-select relative bg-black rounded-[15px] h-full flex items-center cursor-pointer">
                 <select class="hidden">
                   <option value="0">زبان</option>
                   <option value="1">همه</option>
@@ -1047,7 +1047,7 @@
                   <option value="5">انیمیشن</option>
                 </select>
               </div>
-              <div class="advanced-filter-dropdown custom-select relative bg-black rounded-[15px] h-full flex items-center cursor-pointer">
+              <div class="ias-dropdown custom-select relative bg-black rounded-[15px] h-full flex items-center cursor-pointer">
                 <select class="hidden">
                   <option value="0">ترتیب نمایش</option>
                   <option value="1">همه</option>
@@ -1057,7 +1057,7 @@
                   <option value="5">انیمیشن</option>
                 </select>
               </div>
-              <div class="advanced-filter-dropdown custom-select relative bg-black rounded-[15px] h-full flex items-center cursor-pointer">
+              <div class="ias-dropdown custom-select relative bg-black rounded-[15px] h-full flex items-center cursor-pointer">
                 <select class="hidden">
                   <option value="0">کیفیت</option>
                   <option value="1">همه</option>
@@ -1067,7 +1067,7 @@
                   <option value="5">انیمیشن</option>
                 </select>
               </div>
-              <div class="advanced-filter-dropdown custom-select relative bg-black rounded-[15px] h-full flex items-center cursor-pointer">
+              <div class="ias-dropdown custom-select relative bg-black rounded-[15px] h-full flex items-center cursor-pointer">
                 <select class="hidden">
                   <option value="0">رده سنی</option>
                   <option value="1">همه</option>
@@ -1082,39 +1082,39 @@
                 <input class="p-4 w-full outline-0 bg-transparent text-xs text-white" type="text" placeholder="آیدی imdb مثلا : tsddf3">
               </div>
               <!-- select toggle -->
-              <div id="desktopAdvancedFilterMenuToggleSwitchOnlinePlay" class="flex py-3 px-5 bg-black cursor-pointer rounded-xl items-center justify-between gap-3 text-white text-sm">
+              <div id="rja" class="flex py-3 px-5 bg-black cursor-pointer rounded-xl items-center justify-between gap-3 text-white text-sm">
                 <span>پخش انلاین</span>
                 <!-- toggle switch -->
                 <div>
-                  <button id="desktopAdvancedFilterMenuToggleSwitchOnlinePlayBorder" class="bg-transparent border-4 border-[#646464] h-6 w-[40px] rounded-full px-[7px] flex justify-between items-center relative">
-                    <div id="desktopAdvancedFilterMenuToggleSwitchOnlinePlayCircle" class="right-[17px] absolute z-10 bg-[#646464] h-3 w-3 rounded-full flex items-center justify-center"></div>
+                  <button id="rjaBorder" class="bg-transparent border-4 border-[#646464] h-6 w-[40px] rounded-full px-[7px] flex justify-between items-center relative">
+                    <div id="rjaCircle" class="right-[17px] absolute z-10 bg-[#646464] h-3 w-3 rounded-full flex items-center justify-center"></div>
                   </button>
                 </div>
               </div>
-              <div id="desktopAdvancedFilterMenuToggleSwitchSubTitle" class="flex py-3 px-5 bg-black cursor-pointer rounded-xl items-center justify-between gap-3 text-white text-sm">
+              <div id="kil" class="flex py-3 px-5 bg-black cursor-pointer rounded-xl items-center justify-between gap-3 text-white text-sm">
                 <span>زیرنویس چسبیده</span>
                 <!-- toggle switch -->
                 <div>
-                  <button id="desktopAdvancedFilterMenuToggleSwitchSubTitleBorder" class="bg-transparent border-4 border-[#646464] h-6 w-[40px] rounded-full px-[7px] flex justify-between items-center relative">
-                    <div id="desktopAdvancedFilterMenuToggleSwitchSubTitleCircle" class="right-[17px] absolute z-10 bg-[#646464] h-3 w-3 rounded-full flex items-center justify-center"></div>
+                  <button id="kilBorder" class="bg-transparent border-4 border-[#646464] h-6 w-[40px] rounded-full px-[7px] flex justify-between items-center relative">
+                    <div id="kilCircle" class="right-[17px] absolute z-10 bg-[#646464] h-3 w-3 rounded-full flex items-center justify-center"></div>
                   </button>
                 </div>
               </div>
-              <div id="desktopAdvancedFilterMenuToggleSwitchPersianDub" class="flex py-3 px-5 bg-black cursor-pointer rounded-xl items-center justify-between gap-3 text-white text-sm">
+              <div id="qwj" class="flex py-3 px-5 bg-black cursor-pointer rounded-xl items-center justify-between gap-3 text-white text-sm">
                 <span>دوبله فارسی</span>
                 <!-- toggle switch -->
                 <div>
-                  <button id="desktopAdvancedFilterMenuToggleSwitchPersianDubBorder" class="bg-transparent border-4 border-[#646464] h-6 w-[40px] rounded-full px-[7px] flex justify-between items-center relative">
-                    <div id="desktopAdvancedFilterMenuToggleSwitchPersianDubCircle" class="right-[17px] absolute z-10 bg-[#646464] h-3 w-3 rounded-full flex items-center justify-center"></div>
+                  <button id="qwjBorder" class="bg-transparent border-4 border-[#646464] h-6 w-[40px] rounded-full px-[7px] flex justify-between items-center relative">
+                    <div id="qwjCircle" class="right-[17px] absolute z-10 bg-[#646464] h-3 w-3 rounded-full flex items-center justify-center"></div>
                   </button>
                 </div>
               </div>
-              <div id="desktopAdvancedFilterMenuToggleSwitchTop" class="flex py-3 px-5 bg-black cursor-pointer rounded-xl items-center justify-between gap-3 text-white text-sm">
+              <div id="vix" class="flex py-3 px-5 bg-black cursor-pointer rounded-xl items-center justify-between gap-3 text-white text-sm">
                 <span>برترین ها</span>
                 <!-- toggle switch -->
                 <div>
-                  <button id="desktopAdvancedFilterMenuToggleSwitchTopBorder" class="bg-transparent border-4 border-[#646464] h-6 w-[40px] rounded-full px-[7px] flex justify-between items-center relative">
-                    <div id="desktopAdvancedFilterMenuToggleSwitchTopCircle" class="right-[17px] absolute z-10 bg-[#646464] h-3 w-3 rounded-full flex items-center justify-center"></div>
+                  <button id="vixBorder" class="bg-transparent border-4 border-[#646464] h-6 w-[40px] rounded-full px-[7px] flex justify-between items-center relative">
+                    <div id="vixCircle" class="right-[17px] absolute z-10 bg-[#646464] h-3 w-3 rounded-full flex items-center justify-center"></div>
                   </button>
                 </div>
               </div>
