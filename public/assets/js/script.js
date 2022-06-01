@@ -2,6 +2,45 @@
 
 window.onresize = function(){location.reload();}
 
+//! show alert dom loaded
+
+if (matchMedia("(min-width: 1001px)").matches) {
+  swal({
+    title: "یک لحضه وایسا ...",
+    text: "اینجا صرفا یک صفحه غیر رسمی از وب سایت زرفیلم هست!",
+    icon: "warning",
+    button: "بزن بریم!",
+  });
+}
+//! toggle switch change theme
+
+toggleAddClassWithBtnClick('#toggle-change-theme','#toggle-switch-circle',['!right-[58px]']);
+toggleAddClassWithBtnClick('#toggle-change-theme','html',['dark']);
+
+//! change logo with theme status
+
+let toggleChangeTheme = document.querySelector('#toggle-change-theme');
+function logoImage(){
+  let logo = document.querySelector('#logo');
+  if(document.documentElement.classList.contains('dark')){
+    logo.src = '../public/assets/img/logo-light.png';
+    if (matchMedia("(min-width: 1001px)").matches) {
+      swal({
+        title: "همم , یه چیزی ...",
+        text: "راستش حسش نبود استایل های حالت لایت مود رو واسه کل سایت بزنم فقط واسه هدر حالت لایت مود زدم!",
+        icon: "warning",
+        button: "بزن بریم!",
+      });
+    }
+  } else {
+    logo.src = '../public/assets/img/logo-dark.png';
+  }
+};
+
+toggleChangeTheme.addEventListener('click',()=>{
+  logoImage();
+});
+
 //! custom functions
 
 //? add style with click
@@ -117,17 +156,11 @@ toggleAddClassWithBtnClick('#desktopAdvancedFilterMenuToggleSwitchPersianDub', '
 toggleAddClassWithBtnClick('#desktopAdvancedFilterMenuToggleSwitchTop', '#desktopAdvancedFilterMenuToggleSwitchTopBorder',['!bg-[#E88209]' ,'!border-[#E88209]']);
 toggleAddClassWithBtnClick('#desktopAdvancedFilterMenuToggleSwitchTop', '#desktopAdvancedFilterMenuToggleSwitchTopCircle',['!right-[3px]','!bg-black']);
 
-
 //? add bg yellow with click advanced search base tab
 addStyleWithClick('#advanced-category-base > button','bg-[#EA8308]');
 
 //? show and hide advanced filter desktop menu
 toggleAddClassWithBtnClick('#advanced-filter-btn','#advanced-filter-menu-desktop',['!visible','!opacity-100']);
-
-//? toggle change theme btn
-toggleAddClassWithBtnClick('#toggle-change-theme','#toggle-switch-circle',['!right-[58px]']);
-toggleAddClassWithBtnClick('#toggle-change-theme','html',['dark']);
-
 
 //? show desktop category menu with click button
 toggleAddClassWithBtnClick('.desktop-category-button','.desktop-category-menu',['!visible','!opacity-100']);
@@ -239,7 +272,9 @@ function cardSlider() {
       loop: true,
       autoplay: true,
       slidesPerView: 'auto',
-      allowTouchMove: false,
+      allowTouchMove: true,
+      allowSlidePrev: false,
+      disableOnInteraction: true,
       speed: 500,
       breakpoints: {
         1024: {

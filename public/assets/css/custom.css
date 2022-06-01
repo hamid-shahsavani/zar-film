@@ -76,6 +76,40 @@
   border: 1px solid #c8730a !important;
 }
 
+/*? for sweetalert */
+
+.swal-modal {
+  background-color: #141923;
+}
+
+.swal-title {
+  color: #DBDCDD;
+}
+
+.swal-text {
+  color: #DBDCDD;
+  text-align: center;
+}
+
+.swal-overlay {
+  z-index: 40 !important;
+}
+
+.swal-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.swal-button {
+  background-color: #B2670E;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.swal-button--confirm:hover {
+  background-color: #B2670E !important;
+}
+
 /*? for intro desktop background color */
 
 @media screen and (min-width: 1024px) {
@@ -137,6 +171,7 @@
 
 .desktop-category-menu .active {
   background-color: rgba(0, 0, 0, 0.8);
+  color: white !important;
 }
 
 /*? show active desktop category content */

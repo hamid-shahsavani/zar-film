@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="assets/css/custom.css"/>
     <title>zar-film front-end!</title>
   </head>
-  <body class="bg-[#000101] dark:bg-[#F7F8F8] overflow-x-hidden transition-colors duration-500">
+  <body class="bg-[#000101] overflow-x-hidden transition-colors duration-500">
     <header>
       <!-- top-message -->
       <div class="w-full z-50 bg-amber-700 dark:bg-[#E4810D] dark:text-[#fff] text-slate-200" id="top-message">
         <div class="container px-3 md:px-2 flex h-10 items-center">
           <div class="w-[97%] flex items-center justify-center">
-            <span class="font-light">دریافت ادرس های جدید در تلگرام!</span>
-            <a href="javascript:void(0)" class="mr-4 px-3 py-0.5 rounded-lg bg-amber-800 dark:bg-amber-500 bg-opacity-60 font-light">عضویت</a>
+            <span class="font-light">زرفیلم را در تلگرام دنبال کنید!</span>
+            <a href="https://t.me/zarfilm_com" class="mr-4 px-3 py-0.5 rounded-lg bg-amber-800 dark:bg-amber-500 bg-opacity-60 font-light">عضویت</a>
           </div>
           <div class="w-[3%] flex justify-end">
             <button class="flex justify-start border border-slate-200 p-1 rounded-lg">
@@ -41,38 +41,38 @@
       <!-- header-top --->
       <div class="space-y-0.5">
         <!-- top -->
-        <div class="flex items-center justify-center bg-[#141923] h-16">
+        <div class="flex items-center justify-center bg-[#141923] dark:bg-[#FEFEFE] h-16">
           <div class="container w-full px-2 md:px-2 flex items-center justify-between relative">
-            <!-- toggle switch -->
+            <!-- toggle switch theme -->
             <div class="md:-order-2">
-              <button id="toggle-change-theme" class="bg-[#06070A] transition-all duration-700 h-9 w-[90px] rounded-full px-[7px] flex justify-between items-center relative">
+              <button id="toggle-change-theme" class="bg-[#06070A] dark:bg-[#d9dada] transition-all duration-700 h-9 w-[90px] rounded-full px-[7px] flex justify-between items-center relative">
                 <div class="z-20">
-                  <svg class="w-5 stroke-[#cbcaca] fill-[#cbcaca]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                  <svg class="w-5 stroke-[#cbcaca] fill-[#cbcaca] dark:fill-[#585959] dark:stroke-[#585959]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
                 </div>
                 <div class="z-20">
-                  <svg class="w-5 fill-[#cbcaca] stroke-[#cbcaca]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                  <svg class="w-5 fill-[#cbcaca] stroke-[#cbcaca] dark:stroke-[#585959] dark:fill-[#585959]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                 </div>
-                <div id="toggle-switch-circle" class="right-[4px] absolute transition-all duration-700 z-10 bg-[#232428] h-7 w-7 rounded-full flex items-center justify-center"></div>
+                <div id="toggle-switch-circle" class="right-[4px] absolute transition-all duration-700 z-10 bg-[#232428] dark:bg-[#FFFFFF] h-7 w-7 rounded-full flex items-center justify-center"></div>
               </button>
             </div>
             <!-- logo -->
             <div class="md:-order-5">
               <a href="javascript:void(0)">
-                <img class="mr-6 md:m-0" width="130" src="../public/assets/img/logo-dark.png" alt="">
+                <img id="logo" class="mr-6 md:m-0" width="130" src="../public/assets/img/logo-dark.png" alt="">
               </a>
             </div>
             <!-- category and links -->
             <div class="md:-order-4 flex gap-6 items-center">
               <!-- category -->
-              <div class="hidden md:flex justify-between items-center bg-black p-2.5 rounded-xl cursor-pointer desktop-category-button">
+              <div class="hidden md:flex justify-between items-center bg-black dark:bg-[#dddee0] p-2.5 rounded-xl cursor-pointer desktop-category-button">
                 <div class="flex gap-3 items-center">
-                  <svg class="fill-white w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><defs><style>.fa-secondary{opacity:.4}</style></defs><path class="fa-primary" d="M192 176C192 202.5 170.5 224 144 224H48C21.49 224 0 202.5 0 176V80C0 53.49 21.49 32 48 32H144C170.5 32 192 53.49 192 80V176zM448 432C448 458.5 426.5 480 400 480H304C277.5 480 256 458.5 256 432V336C256 309.5 277.5 288 304 288H400C426.5 288 448 309.5 448 336V432z"/><path class="fa-secondary" d="M448 184C448 206.1 430.1 224 408 224H296C273.9 224 256 206.1 256 184V72C256 49.91 273.9 32 296 32H408C430.1 32 448 49.91 448 72V184zM192 440C192 462.1 174.1 480 152 480H40C17.91 480 0 462.1 0 440V328C0 305.9 17.91 288 40 288H152C174.1 288 192 305.9 192 328V440z"/></svg>
-                  <span class="text-white font-extralight text-sm">دسته بندی ها</span>
+                  <svg class="fill-white dark:fill-[#353636] w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><defs><style>.fa-secondary{opacity:.4}</style></defs><path class="fa-primary" d="M192 176C192 202.5 170.5 224 144 224H48C21.49 224 0 202.5 0 176V80C0 53.49 21.49 32 48 32H144C170.5 32 192 53.49 192 80V176zM448 432C448 458.5 426.5 480 400 480H304C277.5 480 256 458.5 256 432V336C256 309.5 277.5 288 304 288H400C426.5 288 448 309.5 448 336V432z"/><path class="fa-secondary" d="M448 184C448 206.1 430.1 224 408 224H296C273.9 224 256 206.1 256 184V72C256 49.91 273.9 32 296 32H408C430.1 32 448 49.91 448 72V184zM192 440C192 462.1 174.1 480 152 480H40C17.91 480 0 462.1 0 440V328C0 305.9 17.91 288 40 288H152C174.1 288 192 305.9 192 328V440z"/></svg>
+                  <span class="text-white dark:text-[#333436] font-extralight text-sm">دسته بندی ها</span>
                 </div>
               </div>
               <!-- links -->
-              <a href="#" class="hidden lg:block text-[#efefef] text-sm font-light transition-all duration-500 hover:text-white">هنرمندان</a>
-              <a href="#" class="hidden lg:block text-[#efefef] text-sm font-light transition-all duration-500 hover:text-white">پخش انلاین</a>
+              <a href="#" class="hidden lg:block text-[#efefef] dark:text-[#636567] text-sm font-light transition-all duration-500 hover:text-white">هنرمندان</a>
+              <a href="#" class="hidden lg:block text-[#efefef] dark:text-[#636567] text-sm font-light transition-all duration-500 hover:text-white">پخش انلاین</a>
             </div>
             <!-- category menu -->
             <div class="bg-[#151A23] hidden md:flex shadow-sm shadow-[#0c0f15] z-50 bg-opacity-90 backdrop-blur-sm w-[700px] h-[225px] overflow-hidden p-4 absolute top-[73px] left-0 right-[30px] lg:right-[180px] xl:right-[210px] 2xl:right-[270px] rounded-[20px] triangle transition-all duration-500 invisible opacity-0 desktop-category-menu">
@@ -244,10 +244,10 @@
               </div>
             </div>
             <!-- search -->
-            <div class="hidden md:flex md:-order-3 items-center px-2 gap-3 bg-black h-[45px] xl:w-[400px] rounded-xl">
+            <div class="hidden md:flex md:-order-3 items-center px-2 gap-3 bg-black dark:bg-[#FEFEFF] border-[1px] border-transparent dark:border-[#bebebe] h-[45px] xl:w-[400px] rounded-xl">
               <svg class="md:hidden w-5 h-5 stroke-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
               <input type="text" placeholder="نام فیلم مورد نظر را وارد کنید ..." class="bg-transparent flex-1 font-extralight text-sm text-gray-200 outline-none">
-              <button class="bg-[#DD7D08] hidden md:block p-1 rounded-md ring-[3px] ring-[#343535]">
+              <button class="bg-[#DD7D08] dark:bg-[#ee8505] hidden md:block p-1 rounded-md ring-[3px] ring-[#343535] dark:ring-[#efefef]">
                 <svg class="w-5 h-5 stroke-white fill-[#DD7D08]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
               </button>
             </div>
@@ -551,7 +551,7 @@
                 <img class="w-full rounded-xl overflow-hidden" src="assets/img/slider-card-1.jpg" alt="">
                 <!-- top -->
                 <div href="javascript:void(0);" class="flex justify-center">
-                  <div class="absolute -top-3 bg-[#279A2D] text-white font-extralight px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
+                  <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
                 </div>
                 <!-- rate user -->
                 <div class="relative w-full flex justify-between text-white px-2.5 bottom-12">
@@ -579,7 +579,7 @@
                 <img class="w-full rounded-xl overflow-hidden" src="assets/img/slider-card-2.jpg" alt="">
                 <!-- top -->
                 <div href="javascript:void(0);" class="flex justify-center">
-                  <div class="absolute -top-3 bg-[#279A2D] text-white font-extralight px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
+                  <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
                 </div>
                 <!-- rate user -->
                 <div class="relative w-full flex justify-between text-white px-2.5 bottom-12">
@@ -607,7 +607,7 @@
                 <img class="w-full rounded-xl overflow-hidden" src="assets/img/slider-card-3.jpg" alt="">
                 <!-- top -->
                 <div href="javascript:void(0);" class="flex justify-center">
-                  <div class="absolute -top-3 bg-[#279A2D] text-white font-extralight px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
+                  <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
                 </div>
                 <!-- rate user -->
                 <div class="relative w-full flex justify-between text-white px-2.5 bottom-12">
@@ -635,7 +635,7 @@
                 <img class="w-full rounded-xl overflow-hidden" src="assets/img/slider-card-4.jpg" alt="">
                 <!-- top -->
                 <div href="javascript:void(0);" class="flex justify-center">
-                  <div class="absolute -top-3 bg-[#279A2D] text-white font-extralight px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
+                  <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
                 </div>
                 <!-- rate user -->
                 <div class="relative w-full flex justify-between text-white px-2.5 bottom-12">
@@ -663,7 +663,7 @@
                 <img class="w-full rounded-xl overflow-hidden" src="assets/img/slider-card-5.jpg" alt="">
                 <!-- top -->
                 <div href="javascript:void(0);" class="flex justify-center">
-                  <div class="absolute -top-3 bg-[#279A2D] text-white font-extralight px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
+                  <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
                 </div>
                 <!-- rate user -->
                 <div class="relative w-full flex justify-between text-white px-2.5 bottom-12">
@@ -1401,7 +1401,7 @@
           </a>
         </div>
         <!-- cards -->
-        <div class="flex px-4 gap-4 overflow-x-scroll md:overflow-hidden md:gap-y-2 md:gap-x-4 md:grid md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7">
+        <div class="flex px-4 pt-1 gap-4 overflow-x-scroll md:overflow-hidden md:gap-y-2 md:gap-x-4 md:grid md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7">
           <a href="javascript:void(0)" class="animation-card relative pt-3 flex min-w-[170px]">
             <!-- image , rate user , rate imdb , mark , top-text -->
             <div class="w-full relative">
@@ -1721,7 +1721,7 @@
           </div>
         </div>
         <!-- cards -->
-        <div class="flex mx-4 md:m-0 gap-4 md:gap-5 overflow-x-scroll md:overflow-hidden w-full md:grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
+        <div class="flex pt-1 mx-4 md:m-0 gap-4 md:gap-5 overflow-x-scroll md:overflow-hidden w-full md:grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
           <a href="javascript:void(0)" class="persian-movie-dub-card relative pt-3 flex min-w-[170px]">
             <!-- image , rate user , rate imdb , mark , top-text -->
             <div class="w-full relative">
@@ -1729,7 +1729,7 @@
               <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/slider-card-1.jpg" alt="">
               <!-- top -->
               <div href="javascript:void(0);" class="flex justify-center z-20 absolute top-0 left-1/2">
-                <div class="absolute -top-3 bg-[#279B2C] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
               </div>
               <!-- rate -->
               <div class="relative w-full flex justify-between text-white px-1 bottom-10">
@@ -1772,7 +1772,7 @@
               <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/slider-card-4.jpg" alt="">
         <!-- top -->
               <div href="javascript:void(0);" class="flex justify-center z-20 absolute top-0 left-1/2">
-                <div class="absolute -top-3 bg-[#279B2C] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
               </div>
               <!-- rate -->
               <div class="relative w-full flex justify-between text-white px-1 bottom-10">
@@ -1815,7 +1815,7 @@
               <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/slider-card-3.jpg" alt="">
               <!-- top -->
               <div href="javascript:void(0);" class="flex justify-center z-20 absolute top-0 left-1/2">
-                <div class="absolute -top-3 bg-[#279B2C] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
               </div>
               <!-- rate -->
               <div class="relative w-full flex justify-between text-white px-1 bottom-10">
@@ -1858,7 +1858,7 @@
               <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/slider-card-6.jpg" alt="">
               <!-- top -->
               <div href="javascript:void(0);" class="flex justify-center z-20 absolute top-0 left-1/2">
-                <div class="absolute -top-3 bg-[#279B2C] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
               </div>
               <!-- rate -->
               <div class="relative w-full flex justify-between text-white px-1 bottom-10">
@@ -1901,7 +1901,7 @@
               <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/slider-card-4.jpg" alt="">
               <!-- top -->
               <div href="javascript:void(0);" class="flex justify-center z-20 absolute top-0 left-1/2">
-                <div class="absolute -top-3 bg-[#279B2C] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
               </div>
               <!-- rate -->
               <div class="relative w-full flex justify-between text-white px-1 bottom-10">
@@ -1944,7 +1944,7 @@
               <img class="w-[170px] md:w-full rounded-xl overflow-hidden" src="assets/img/slider-card-2.jpg" alt="">
               <!-- top -->
               <div href="javascript:void(0);" class="flex justify-center z-20 absolute top-0 left-1/2">
-                <div class="absolute -top-3 bg-[#279B2C] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
+                <div class="absolute -top-3 bg-[#EB8307] text-white font-extralight text-sm px-4 py-0.5 ring-[5px] ring-black rounded-full">دوبله</div> 
               </div>
               <!-- rate -->
               <div class="relative w-full flex justify-between text-white px-1 bottom-10">
@@ -1997,7 +1997,7 @@
           </a>
         </div>
         <!-- cards -->
-        <div class="flex px-4 gap-4 overflow-x-scroll md:overflow-hidden md:gap-y-2 md:gap-x-4 md:grid md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7">
+        <div class="flex pt-1 px-4 gap-4 overflow-x-scroll md:overflow-hidden md:gap-y-2 md:gap-x-4 md:grid md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7">
           <a href="javascript:void(0)" class="persian-movie-sub-card relative pt-3 flex min-w-[170px]">
             <!-- image , rate user , rate imdb , mark , top-text -->
             <div class="w-full relative">
@@ -2330,6 +2330,7 @@
         </a>
       </div>
     </footer>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
