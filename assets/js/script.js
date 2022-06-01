@@ -481,10 +481,6 @@ document.querySelector(`.persian-movie-dub-card:nth-child(4)`).classList.add(...
 document.querySelector(`.persian-movie-dub-card:nth-child(5)`).classList.add(... ['md:hidden','xl:flex']);
 document.querySelector(`.persian-movie-dub-card:nth-child(6)`).classList.add(... ['md:hidden','2xl:flex']);
 
-//! reload with resize
-
-window.onresize = function(){location.reload();}
-
 //! show alert dom loaded
 
 if (matchMedia("(min-width: 1001px)").matches) {
