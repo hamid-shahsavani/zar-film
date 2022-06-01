@@ -507,7 +507,7 @@ let toggleChangeTheme = document.querySelector('#toggle-change-theme');
 function logoImage(){
   let logo = document.querySelector('#logo');
   if(document.documentElement.classList.contains('dark')){
-    logo.src = '../public/assets/img/logo-light.png';
+    logo.src = 'assets/img/logo-light.png';
     if (matchMedia("(min-width: 1001px)").matches) {
       swal({
         title: "همم , یه چیزی ...",
@@ -517,7 +517,7 @@ function logoImage(){
       });
     }
   } else {
-    logo.src = '../public/assets/img/logo-dark.png';
+    logo.src = 'assets/img/logo-dark.png';
   }
 };
 
