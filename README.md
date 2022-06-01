@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/sys113/zarfilm/main/screenshot.png" style="border-radius:50%">
+  <img src="https://raw.githubusercontent.com/sys113/zar-film/main/screenshot.png" style="border-radius:50%">
 </div>
 
 ---
