@@ -487,7 +487,7 @@ window.onresize = function(){location.reload();}
 
 //! show alert dom loaded
 
-if (matchMedia("(min-width: 1001p)").matches) {
+if (matchMedia("(min-width: 1001px)").matches) {
   swal({
     title: "یک لحضه وایسا ...",
     text: "اینجا صرفا یک صفحه غیر رسمی از وب سایت زرفیلم هست!",
