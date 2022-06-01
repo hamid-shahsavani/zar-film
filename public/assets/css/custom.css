@@ -155,6 +155,19 @@
   z-index: 2;
 }
 
+/*? after psudo for advanced-category menu desktop */
+
+.triangle::before{
+  border: 15px solid transparent;
+  border-bottom-color: #0f121b;
+  bottom: 100%;
+  content: "";
+  display: block;
+  left: 18%;
+  position: absolute;
+  z-index: 2;
+}
+
 /*? after for category menu desktop */
 
 .desktop-category-menu::before{
