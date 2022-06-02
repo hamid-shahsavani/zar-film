@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tw": "postcss ./tailwind.css -o ./public/assets/css/style.css --watch"
+    "tw": "postcss ./tailwind.css -o ./assets/css/style.css --watch"
   },
   "keywords": [],
   "author": "",
