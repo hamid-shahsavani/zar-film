@@ -1,9 +1,6 @@
 module.exports = {
   darkMode: 'class',
-  content: ["./public/*.html"],
-  safelist: [
-    '!stroke-[#eb8307]',
-  ],
+  content: ["./public/**/*.{html,js}"],
   theme: {
     extend: {
       container: {
