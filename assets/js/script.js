@@ -494,7 +494,7 @@ if (matchMedia("(min-width: 1001px)").matches) {
 
 //! toggle switch change theme
 
-toggleAddClassWithBtnClick('#toggle-change-theme','#toggle-switch-circle',['!right-[58px]']);
+toggleAddClassWithBtnClick('#toggle-change-theme','#toggle-switch-circle',['toggle-to-moon']);
 toggleAddClassWithBtnClick('#toggle-change-theme','html',['dark']);
 
 //! change logo with theme status
@@ -575,12 +575,12 @@ advancedSerachMenuMobile.forEach((i)=> {
 });
 
 //? mobile advancedSearchMenu toggleSwitch persianDub
-toggleAddClassWithBtnClick('#xtw', '#xtwBorder',['!bg-[#E88209]' ,'!border-[#E88209]']);
-toggleAddClassWithBtnClick('#xtw', '#xtwCircle',['!right-[3px]','!bg-black']);
+toggleAddClassWithBtnClick('#xtw', '#xtwBorder',['toggle-active-bg' ,'!border-[#E88209]']);
+toggleAddClassWithBtnClick('#xtw', '#xtwCircle',['circle-to-r','circle-bg']);
 
 //? mobile advancedSearchMenu toggleSwitch subTitle
-toggleAddClassWithBtnClick('#rhp', '#rhpBorder',['!bg-[#E88209]' ,'!border-[#E88209]']);
-toggleAddClassWithBtnClick('#rhp', '#rhpCircle',['!right-[3px]','!bg-black']);
+toggleAddClassWithBtnClick('#rhp', '#rhpBorder',['toggle-active-bg' ,'!border-[#E88209]']);
+toggleAddClassWithBtnClick('#rhp', '#rhpCircle',['circle-to-r','circle-bg']);
 
 //! for mobile header bottom
 
@@ -607,34 +607,34 @@ for(let i = 1; i <= 3; i++){
 //! for advanced search desktop
 
 //? desktop advancedSearchMenu toggleSwitch subTitle
-toggleAddClassWithBtnClick('#sfr', '#sfrBorder',['!bg-[#E88209]' ,'!border-[#E88209]']);
-toggleAddClassWithBtnClick('#sfr', '#sfrCircle',['!right-[3px]','!bg-black']);
+toggleAddClassWithBtnClick('#sfr', '#sfrBorder',['toggle-active-bg' ,'!border-[#E88209]']);
+toggleAddClassWithBtnClick('#sfr', '#sfrCircle',['circle-to-r','circle-bg']);
 
 //? desktop advancedSearchMenu toggleSwitch persian dub
-toggleAddClassWithBtnClick('#sxa', '#sxaBorder',['!bg-[#E88209]' ,'!border-[#E88209]']);
-toggleAddClassWithBtnClick('#sxa', '#sxaCircle',['!right-[3px]','!bg-black']);
+toggleAddClassWithBtnClick('#sxa', '#sxaBorder',['toggle-active-bg' ,'!border-[#E88209]']);
+toggleAddClassWithBtnClick('#sxa', '#sxaCircle',['circle-to-r','circle-bg']);
 
 //? desktop advancedSearchMenu toggleSwitch online play
-toggleAddClassWithBtnClick('#umk', '#umkBorder',['!bg-[#E88209]' ,'!border-[#E88209]']);
-toggleAddClassWithBtnClick('#umk', '#umkCircle',['!right-[3px]','!bg-black']);
+toggleAddClassWithBtnClick('#umk', '#umkBorder',['toggle-active-bg' ,'!border-[#E88209]']);
+toggleAddClassWithBtnClick('#umk', '#umkCircle',['circle-to-r','circle-bg']);
 
 //! for advanced filter desktop
 
 //? desktop advancedfilterMenu toggleSwitch online play
-toggleAddClassWithBtnClick('#rja', '#rjaBorder',['!bg-[#E88209]' ,'!border-[#E88209]']);
-toggleAddClassWithBtnClick('#rja', '#rjaCircle',['!right-[3px]','!bg-black']);
+toggleAddClassWithBtnClick('#rja', '#rjaBorder',['toggle-active-bg' ,'!border-[#E88209]']);
+toggleAddClassWithBtnClick('#rja', '#rjaCircle',['circle-to-r','circle-bg']);
 
 //? desktop advancedSearchMenu toggleSwitch subTitle
-toggleAddClassWithBtnClick('#kil', '#kilBorder',['!bg-[#E88209]' ,'!border-[#E88209]']);
-toggleAddClassWithBtnClick('#kil', '#kilCircle',['!right-[3px]','!bg-black']);
+toggleAddClassWithBtnClick('#kil', '#kilBorder',['toggle-active-bg' ,'!border-[#E88209]']);
+toggleAddClassWithBtnClick('#kil', '#kilCircle',['circle-to-r','circle-bg']);
 
 //? desktop advancedSearchMenu toggleSwitch persian dub
-toggleAddClassWithBtnClick('#qwj', '#qwjBorder',['!bg-[#E88209]' ,'!border-[#E88209]']);
-toggleAddClassWithBtnClick('#qwj', '#qwjCircle',['!right-[3px]','!bg-black']);
+toggleAddClassWithBtnClick('#qwj', '#qwjBorder',['toggle-active-bg' ,'!border-[#E88209]']);
+toggleAddClassWithBtnClick('#qwj', '#qwjCircle',['circle-to-r','circle-bg']);
 
 //? desktop advancedSearchMenu toggleSwitch persian dub
-toggleAddClassWithBtnClick('#vix', '#vixBorder',['!bg-[#E88209]' ,'!border-[#E88209]']);
-toggleAddClassWithBtnClick('#vix', '#vixCircle',['!right-[3px]','!bg-black']);
+toggleAddClassWithBtnClick('#vix', '#vixBorder',['toggle-active-bg' ,'!border-[#E88209]']);
+toggleAddClassWithBtnClick('#vix', '#vixCircle',['circle-to-r','circle-bg']);
 
 //? add bg yellow with click advanced search base tab
 addStyleWithClick('#advanced-category-base > button','bg-[#EA8308]');

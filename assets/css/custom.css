@@ -193,3 +193,23 @@
   display: grid !important;
   background-color: transparent;
 }
+
+/*? for toggle theme switch to moon */
+
+.toggle-to-moon {
+  right: 58px !important;
+}
+
+/*? for toggle switch active */
+
+.circle-to-r {
+  right: 3px !important;
+}
+
+.toggle-active-bg {
+  background-color: #E88209 !important;
+}
+
+.circle-bg {
+  background-color: #141822 !important;
+}
