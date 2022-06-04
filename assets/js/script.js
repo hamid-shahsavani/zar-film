@@ -1,7 +1,13 @@
  
+//! element selector 
+
+function $(e) {
+  return document.querySelectorAll(e);
+}
+
 //! object for add cards to dom
 
- let cards = {
+const cards = {
    mobileSliderCard: {
      one: {
        type: 'sub',
@@ -191,7 +197,6 @@
 
 //? add mobile slider cards to dom
 Object.keys(cards.mobileSliderCard).forEach(function(key) {
-  let parentForAppend = document.querySelector('#mobile-card-slider');
   tag = `<a href="javascript:void(0)" class="w-full">
   <div class="w-[200px] relative">
     <!-- img -->
@@ -219,15 +224,14 @@ Object.keys(cards.mobileSliderCard).forEach(function(key) {
     </div>
   </div>
   </a>`;
-  let divTag = document.createElement('div');
+  const divTag = document.createElement('div');
   divTag.classList.add(... ['swiper-slide','w-full']);
   divTag.innerHTML = tag;
-  parentForAppend.appendChild(divTag);
+  $('#mobile-card-slider')[0].appendChild(divTag);
 });
 
 //? add desktop slider cards to dom
 Object.keys(cards.desktopSliderCard).forEach(function(key) {
-  let parentForAppend = document.querySelector('#desktop-card-slider');
   tag = `<p class="hidden card-title">${cards.desktopSliderCard[key].title}</p>
   <a href="javascript:void(0)" class="w-full flex justify-center">
     <div class="w-[200px] relative">
@@ -256,15 +260,14 @@ Object.keys(cards.desktopSliderCard).forEach(function(key) {
       </div>
     </div>
   </a>`;
-  let divTag = document.createElement('div');
+  const divTag = document.createElement('div');
   divTag.classList.add(... ['swiper-slide','w-1/3','swiper-slide-desktop']);
   divTag.innerHTML = tag;
-  parentForAppend.appendChild(divTag);
+  $('#desktop-card-slider')[0].appendChild(divTag);
 });
 
 //? add last view card to dom
 Object.keys(cards.lastView).forEach(function(key) {
-  let parentForAppend = document.querySelector('#last-view');
   tag = `<div class="p-3.5 rounded-full border bg-black bg-opacity-30 absolute top-[36%] left-[44%] z-10">
   <svg class="fill-white w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M24.52 38.13C39.66 29.64 58.21 29.99 73.03 39.04L361 215C375.3 223.8 384 239.3 384 256C384 272.7 375.3 288.2 361 296.1L73.03 472.1C58.21 482 39.66 482.4 24.52 473.9C9.377 465.4 0 449.4 0 432V80C0 62.64 9.377 46.63 24.52 38.13V38.13zM64.69 52.7C54.81 46.66 42.44 46.43 32.35 52.09C22.25 57.75 16 68.42 16 80V432C16 443.6 22.25 454.2 32.35 459.9C42.44 465.6 54.81 465.3 64.69 459.3L352.7 283.3C362.2 277.5 368 267.1 368 256C368 244.9 362.2 234.5 352.7 228.7L64.69 52.7z"/></svg>
 </div>
@@ -276,18 +279,16 @@ Object.keys(cards.lastView).forEach(function(key) {
 <div class="absolute bottom-[3px] left-[30px] text-white font-light">
   <span>${cards.lastView[key].title}</span>
 </div>`;
-  let newTag = document.createElement('a');
+  const newTag = document.createElement('a');
   newTag.setAttribute('href', "javascript:void(0)");
   newTag.classList.add(... ['view-card','relative', 'overflow-hidden', 'flex', 'justify-center']);
   newTag.innerHTML = tag;
-  parentForAppend.appendChild(newTag);
+  $('#last-view')[0].appendChild(newTag);
 });
-let lastView = document.querySelector('.view-card:last-child');
-lastView.classList.add(... ['lg:hidden','xl:flex']);
+$('.view-card:last-child')[0].classList.add(... ['lg:hidden','xl:flex']);
 
 //? add last update card to dom
 Object.keys(cards.lastUpdate).forEach(function(key) {
-  let parentForAppend = document.querySelector('#last-update');
   tag = `<div href="javascript:void(0);" class="relative w-[280px] md:w-[95%] rounded-2xl overflow-hidden">
   <!-- img -->
   <img class="md:w-full md:h-[190px]  transition-all duration-500 hover:brightness-50 md:object-cover" src="${cards.lastUpdate[key].image}" alt="">
@@ -308,22 +309,21 @@ Object.keys(cards.lastUpdate).forEach(function(key) {
 <div class="absolute -bottom-9 md:-bottom-9 left-3 md:left-7 text-white font-light">
   <span>${cards.lastUpdate[key].title}</span>
 </div>`;
-  let newTag = document.createElement('a');
+  const newTag = document.createElement('a');
   newTag.setAttribute('href', "javascript:void(0)");
   newTag.classList.add(... ['update-card','relative','mb-10','flex','justify-center']);
   newTag.innerHTML = tag;
-  parentForAppend.appendChild(newTag);
+  $('#last-update')[0].appendChild(newTag);
 });
 for(let i = 5; i<= 6; i++){
-  document.querySelector(`.update-card:nth-child(${i})`).classList.add(... ['md:hidden','xl:flex']);
+  $(`.update-card:nth-child(${i})`)[0].classList.add(... ['md:hidden','xl:flex']);
 }
 for(let i = 7; i <= 8; i++){
-  document.querySelector(`.update-card:nth-child(${i})`).classList.add(... ['md:hidden','lg:flex']);
+  $(`.update-card:nth-child(${i})`)[0].classList.add(... ['md:hidden','lg:flex']);
 }
 
 //? add animation card to dom
 Object.keys(cards.animation).forEach(function(key) {
-  let parentForAppend = document.querySelector('#animation-movie');
   tag = `<!-- image , rate user , rate imdb , mark , top-text -->
   <div class="w-full relative">
     <!-- img -->
@@ -365,19 +365,18 @@ Object.keys(cards.animation).forEach(function(key) {
   </div>
   <!-- bottom-text -->
   <span class="absolute w-full text-center bottom-2 text-white transition-all duration-300 hover:text-[#eb8308]">${cards.animation[key].title}</span>`;
-  let newTag = document.createElement('a');
+  const newTag = document.createElement('a');
   newTag.setAttribute('href', "javascript:void(0)");
   newTag.classList.add(... ['animation-card', 'relative', 'pt-3', 'flex', 'min-w-[170px]']);
   newTag.innerHTML = tag;
-  parentForAppend.appendChild(newTag);
+  $('#animation-movie')[0].appendChild(newTag);
 });
-document.querySelector(`.animation-card:nth-child(5)`).classList.add(... ['md:hidden','lg:flex']);
-document.querySelector(`.animation-card:nth-child(6)`).classList.add(... ['md:hidden','xl:flex']);
-document.querySelector(`.animation-card:nth-child(7)`).classList.add(... ['md:hidden','2xl:flex']);
+$(`.animation-card:nth-child(5)`)[0].classList.add(... ['md:hidden','lg:flex']);
+$(`.animation-card:nth-child(6)`)[0].classList.add(... ['md:hidden','xl:flex']);
+$(`.animation-card:nth-child(7)`)[0].classList.add(... ['md:hidden','2xl:flex']);
 
 //? add persian subtitle movie card to dom
 Object.keys(cards.subTitleMovie).forEach(function(key) {
-  let parentForAppend = document.querySelector('#subtitle-movie');
   tag = `<!-- image , rate user , rate imdb , mark , top-text -->
   <div class="w-full relative">
     <!-- img -->
@@ -418,19 +417,18 @@ Object.keys(cards.subTitleMovie).forEach(function(key) {
   </div>
   <!-- bottom-text -->
   <span class="absolute w-full text-center bottom-2 text-white transition-all duration-300 hover:text-[#eb8308]">${cards.subTitleMovie[key].title}</span>`;
-  let newTag = document.createElement('a');
+  const newTag = document.createElement('a');
   newTag.setAttribute('href', "javascript:void(0)");
   newTag.classList.add(... ['persian-movie-sub-card', 'relative', 'pt-3', 'flex', 'min-w-[170px]']);
   newTag.innerHTML = tag;
-  parentForAppend.appendChild(newTag);
+  $('#subtitle-movie')[0].appendChild(newTag);
 });
-document.querySelector(`.persian-movie-sub-card:nth-child(5)`).classList.add(... ['md:hidden','lg:flex']);
-document.querySelector(`.persian-movie-sub-card:nth-child(6)`).classList.add(... ['md:hidden','xl:flex']);
-document.querySelector(`.persian-movie-sub-card:nth-child(7)`).classList.add(... ['md:hidden','2xl:flex']);
+$(`.persian-movie-sub-card:nth-child(5)`)[0].classList.add(... ['md:hidden','lg:flex']);
+$(`.persian-movie-sub-card:nth-child(6)`)[0].classList.add(... ['md:hidden','xl:flex']);
+$(`.persian-movie-sub-card:nth-child(7)`)[0].classList.add(... ['md:hidden','2xl:flex']);
 
 //? add persian dubbed movie card to dom
 Object.keys(cards.dubbedMovie).forEach(function(key) {
-  let parentForAppend = document.querySelector('#dubbed-movie');
   tag = `<!-- image , rate user , rate imdb , mark , top-text -->
   <div class="w-full relative">
     <!-- img -->
@@ -471,15 +469,15 @@ Object.keys(cards.dubbedMovie).forEach(function(key) {
   </div>
   <!-- bottom-text -->
   <span class="absolute w-full text-center bottom-2 text-white transition-all duration-300 hover:text-[#eb8308]">${cards.dubbedMovie[key].title}</span>`;
-  let newTag = document.createElement('a');
+  const newTag = document.createElement('a');
   newTag.setAttribute('href', "javascript:void(0)");
   newTag.classList.add(... ['persian-movie-dub-card', 'relative', 'pt-3', 'flex', 'min-w-[170px]']);
   newTag.innerHTML = tag;
-  parentForAppend.appendChild(newTag);
+  $('#dubbed-movie')[0].appendChild(newTag);
 });
-document.querySelector(`.persian-movie-dub-card:nth-child(4)`).classList.add(... ['md:hidden','lg:flex']);
-document.querySelector(`.persian-movie-dub-card:nth-child(5)`).classList.add(... ['md:hidden','xl:flex']);
-document.querySelector(`.persian-movie-dub-card:nth-child(6)`).classList.add(... ['md:hidden','2xl:flex']);
+$(`.persian-movie-dub-card:nth-child(4)`)[0].classList.add(... ['md:hidden','lg:flex']);
+$(`.persian-movie-dub-card:nth-child(5)`)[0].classList.add(... ['md:hidden','xl:flex']);
+$(`.persian-movie-dub-card:nth-child(6)`)[0].classList.add(... ['md:hidden','2xl:flex']);
 
 //! show alert dom loaded
 
@@ -499,11 +497,9 @@ toggleAddClassWithBtnClick('#toggle-change-theme','html',['dark']);
 
 //! change logo with theme status
 
-let toggleChangeTheme = document.querySelector('#toggle-change-theme');
 function logoImage(){
-  let logo = document.querySelector('#logo');
   if(document.documentElement.classList.contains('dark')){
-    logo.src = 'assets/img/logo-light.png';
+    $('#logo')[0].src = 'assets/img/logo-light.png';
     if (matchMedia("(min-width: 1001px)").matches) {
       swal({
         title: "همم , یه چیزی ...",
@@ -517,7 +513,7 @@ function logoImage(){
   }
 };
 
-toggleChangeTheme.addEventListener('click',()=>{
+$('#toggle-change-theme')[0].addEventListener('click',()=>{
   logoImage();
 });
 
@@ -525,7 +521,7 @@ toggleChangeTheme.addEventListener('click',()=>{
 
 //? add style with click
 function addStyleWithClick(id,style){
-  let select = Array.from(document.querySelectorAll(id));
+  const select = Array.from($(id));
   const handleClick = (e) => {
     select.forEach(i => {
       i.classList.remove(style);
@@ -539,8 +535,8 @@ function addStyleWithClick(id,style){
 
 //? active tab and show tab content
 function activeTabAndContentWithClick(tab,content){
-  let selectTab = Array.from(document.querySelectorAll(tab));
-  let selectContent = Array.from(document.querySelectorAll(content));
+  const selectTab = Array.from($(tab));
+  const selectContent = Array.from($(content));
   selectTab.forEach(i => {
     i.addEventListener('mouseenter', (e) => {
       selectTab.forEach(i => {
@@ -550,18 +546,16 @@ function activeTabAndContentWithClick(tab,content){
         i.classList.remove('active');
       });
       e.currentTarget.classList.add('active');
-      document.querySelector(`#${e.currentTarget.id.replace('tab','content')}`).classList.add('active');
+      $(`#${e.currentTarget.id.replace('tab','content')}`)[0].classList.add('active');
     });
   });
 }
 
 //? show and hide menu button click 
 function toggleAddClassWithBtnClick(btn,menu,style) {
-  let selectId = document.querySelector(btn);
-  let menuSelect = document.querySelector(menu);
-  selectId.addEventListener('click',()=>{
+  $(btn)[0].addEventListener('click',()=>{
     style.forEach((i)=>{
-      menuSelect.classList.toggle(i);
+      $(menu)[0].classList.toggle(i);
     });
   });
 }
@@ -569,7 +563,7 @@ function toggleAddClassWithBtnClick(btn,menu,style) {
 //! for mobile advanced search
 
 //? show and hide mobile advanced search menu
-let advancedSerachMenuMobile = ['#advanced-search-menu-btn-mobile','#advanced-search-menu-mobile-close-btn-top','#advanced-search-menu-mobile-close-btn-bottom'];
+const advancedSerachMenuMobile = ['#advanced-search-menu-btn-mobile','#advanced-search-menu-mobile-close-btn-top','#advanced-search-menu-mobile-close-btn-bottom'];
 advancedSerachMenuMobile.forEach((i)=> {
   toggleAddClassWithBtnClick(i,'#advanced-search-menu-mobile',['!visible','!opacity-100']);
 });
@@ -585,7 +579,7 @@ toggleAddClassWithBtnClick('#rhp', '#rhpCircle',['circle-to-r','circle-bg']);
 //! for mobile header bottom
 
 //? show and hide mobile bottom menu
-let showAndHideBottomMenu = ['#myn-btn', '#myn-close-btn'];
+const showAndHideBottomMenu = ['#myn-btn', '#myn-close-btn'];
 showAndHideBottomMenu.forEach((i)=>{
   toggleAddClassWithBtnClick(i,'#myn-btn',['!space-y-[10px]']);
   toggleAddClassWithBtnClick(i,'#myn-icon-one',['!stroke-[#eb8307]']);
@@ -655,15 +649,13 @@ activeTabAndContentWithClick('#desktop-category-tab div','#desktop-category-cont
 //? hide top-message with click close btn
 addStyleWithClick('#top-message','hidden');
 
-
 //! advanced dropDown
 
 //? search select items drop-down
 function advancedDropDown() {
   let x, i, j, l, ll, selElmnt, a, b, c;
   x = document.getElementsByClassName("custom-select");
-  l = x.length;
-  for (i = 0; i < l; i++) {
+  for (i = 0; i < x.length; i++) {
     selElmnt = x[i].getElementsByTagName("select")[0];
     ll = selElmnt.length;
     a = document.createElement("DIV");
@@ -748,7 +740,7 @@ function cardSlider() {
     });
   } else {
     //? for desktop
-    let swiperDesktop = new Swiper('.swiper-desktop', {
+    const swiperDesktop = new Swiper('.swiper-desktop', {
       loop: true,
       autoplay: true,
       slidesPerView: 'auto',
@@ -767,18 +759,15 @@ function cardSlider() {
     //? desktop change slide and change background
     swiperDesktop.on('slideChange',() => {
       // get active card image src
-      let cardActiveImgSrc = document.querySelector('.swiper-slide-active img').src.split('/');
+      let cardActiveImgSrc = $('.swiper-slide-active img')[0].src.split('/');
       cardActiveImgSrc = cardActiveImgSrc[cardActiveImgSrc.length - 1];
       cardActiveImgSrc = cardActiveImgSrc.replace('slider-card-','');
       cardSlideActiveNumber = cardActiveImgSrc.replace('.jpg','');
       // change intro bg image
-      let backgroundImgSrc = document.querySelector('#intro-bg-img');
-
-      backgroundImgSrc.src = `assets/img/slider-background-${cardSlideActiveNumber}.jpg`;
-
+      $('#intro-bg-img')[0].src = `assets/img/slider-background-${cardSlideActiveNumber}.jpg`;
       // change intro card title
-      let cardTitle = document.querySelector('.swiper-slide-active .card-title').innerHTML;
-      document.querySelector('#card-slider-desktop-title').innerHTML = cardTitle;
+      const cardTitle = $('.swiper-slide-active .card-title')[0].innerHTML;
+      $('#card-slider-desktop-title')[0].innerHTML = cardTitle;
     });
   }
 };
