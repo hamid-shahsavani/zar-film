@@ -771,4 +771,6 @@ function cardSlider() {
     });
   }
 };
-cardSlider();
+
+window.addEventListener('resize', cardSlider());
+window.addEventListener('DOMContentLoaded', cardSlider())
